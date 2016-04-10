@@ -18,13 +18,19 @@ thread.start()
 print("blocking")
 thread.join()
 
+time.sleep(0.5)
 print("looping")
 thread = Interrupt()
+thread.daemon = True
 thread.start()
-while True:
-    print("waiting")
-    time.sleep(1)
-    if not thread.isAlive():
-        print("interrupted")
-        thread.join()
-        exit(1)
+try:
+    while True:
+        print("waiting")
+        time.sleep(1)
+        if not thread.isAlive():
+            print("interrupted")
+            thread.join()
+            exit(1)
+except KeyboardInterrupt as e:
+    # end thread
+    print("quitting")
