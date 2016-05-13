@@ -91,7 +91,7 @@ void setup() {
 }
 
 // the loop routine runs over and over again forever:
-unsigned int steps = 0;
+int steps = 0;
 const int step_d = 2;
 unsigned long pos = 0;
 void loop() 
@@ -104,6 +104,9 @@ void loop()
         Serial.readBytes(ibuf, 2);
         memcpy(&steps, &ibuf, 2);
 
+        if(steps == 0)
+            myEnc.write(0);
+
         char obuf[4];
 
         memcpy(&obuf, &pos, 4);
@@ -115,6 +118,13 @@ void loop()
         bsR();
         bsL();
         steps --;
+        delay(1);
+    }
+    if(steps < 0)
+    {
+        fsR();
+        fsL();
+        steps ++;
         delay(1);
     }
 

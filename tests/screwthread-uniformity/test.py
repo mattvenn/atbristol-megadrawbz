@@ -1,4 +1,5 @@
 import serial
+import pickle
 import struct
 import time
 from serial.tools import list_ports
@@ -21,26 +22,30 @@ serial_port.open()
 time.sleep(2)
 
 def send(pos):
-    bin = struct.pack('<H',pos)
+    bin = struct.pack('<h',pos)
     serial_port.write(bin)
 
     bin = serial_port.read(4)
     pos, = struct.unpack('<L',bin)
     return pos
 
-pos = []
-enc = []
+data = {
+    'pos' : [],
+    'enc' : [],
+    }
+
+send(0)  # reset the counter
+send(800)
+exit(0)
+steps = 20000
 steps_per_send = 20 
-for i in range(20000):
-    encpos = send(steps_per_send)
-    enc.append(encpos)
-    pos.append((i * steps_per_send))
+for i in range(steps):
+    encpos = send(+steps_per_send)
+    data['enc'].append(encpos)
+    data['pos'].append((i * steps_per_send))
 
-import matplotlib.pyplot as plt
-plt.plot(enc, pos)
-plt.xlabel('pos')
-plt.ylabel('send')
-plt.grid(True)
-plt.title('screw uniformity')
-plt.show()
+with open('data.pkl', 'w') as fh:
+    pickle.dump(data, fh)
 
+for i in range(steps):
+    send(-steps_per_send)
