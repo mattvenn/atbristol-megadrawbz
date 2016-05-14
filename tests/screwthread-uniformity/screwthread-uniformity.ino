@@ -33,6 +33,7 @@ Encoder myEnc(LIMITL, LIMITR);
 #endif
 #define BIT_TST(REG, bit, val) ( ( (REG & (1UL << (bit) ) ) == ( (val) << (bit) ) ) )
 
+void send_pos(unsigned long pos);
 
 void fsL()
 {
