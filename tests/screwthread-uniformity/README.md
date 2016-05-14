@@ -10,8 +10,12 @@
 
 [Test program](test.py) sends 20 steps 20k, recording encoder position at each 20 step interval.
 
-Not sure if this is actually happening because with 400k steps at 3200 steps per
-rev = 125 revolutions, and it was maximum 10 revs.
+[firmware](screwthread-uniformity.ino) is running on Arduino.
+
+Not sure if this is actually happening because with 400k steps at 1600 steps per
+rev = 125 revolutions, and it was maximum 10 revs. No it's not happening, the
+firmware is broken because test.py doesn't wait for arduino to finish before
+sending new steps. So nothing can be calculated from distance.
 
 # Results
 

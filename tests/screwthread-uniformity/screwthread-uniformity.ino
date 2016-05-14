@@ -92,25 +92,21 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 int steps = 0;
-const int step_d = 2;
-unsigned long pos = 0;
+const int step_d = 1;
 void loop() 
 {
-    pos = myEnc.read();
+    // regularly update encoder as it's not on interrupts
+    myEnc.read();
 
     if(Serial.available() == 2)
     {
-        char ibuf[2];
-        Serial.readBytes(ibuf, 2);
-        memcpy(&steps, &ibuf, 2);
+        char buf[2];
+        Serial.readBytes(buf, 2);
+        memcpy(&steps, &buf, 2);
 
+        // reset encoder if get 0 steps
         if(steps == 0)
             myEnc.write(0);
-
-        char obuf[4];
-
-        memcpy(&obuf, &pos, 4);
-        Serial.write(obuf, 4);
     }
 
     if(steps > 0)
@@ -118,16 +114,24 @@ void loop()
         bsR();
         bsL();
         steps --;
-        delay(1);
+        delay(step_d);
+        if(steps == 0)
+            send_pos(myEnc.read());
     }
     if(steps < 0)
     {
         fsR();
         fsL();
         steps ++;
-        delay(1);
+        delay(step_d);
+        if(steps == 0)
+            send_pos(myEnc.read());
     }
-
 }
 
-
+void send_pos(unsigned long pos)
+{
+    char buf[4];
+    memcpy(&buf, &pos, 4);
+    Serial.write(buf, 4);
+}

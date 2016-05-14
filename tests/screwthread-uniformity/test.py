@@ -25,6 +25,7 @@ def send(pos):
     bin = struct.pack('<h',pos)
     serial_port.write(bin)
 
+    # will block while stepper turns
     bin = serial_port.read(4)
     pos, = struct.unpack('<L',bin)
     return pos
@@ -36,7 +37,7 @@ data = {
 
 send(0)  # reset the counter
 steps = 20000
-steps_per_send = 20 
+steps_per_send = 20  # decrease this if get timeouts on send()
 for i in range(steps):
     encpos = send(+steps_per_send)
     data['enc'].append(encpos)
