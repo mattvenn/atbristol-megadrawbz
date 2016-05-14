@@ -1,5 +1,7 @@
 # Testing screw thread uniformity
 
+![setup](setup.svg)
+
 * standard M10 threaded bar mounted to NEMA17 200 steps per rev stepper
 * 8 time microstepping
 * 12v
