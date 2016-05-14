@@ -1,10 +1,14 @@
 import math
 import pickle
 import matplotlib.pyplot as plt
+from scipy import stats
 from sys import argv
 
-mm_per_step = (math.pi * 8) / (16 * 200 * 10)  # 16 time multistep don't know why the additional 10
-mm_per_pulse = 300.0 / 12606 # measured from graph 120mm long experiment
+# 8mm screw thread depth, 8 time multistep on 200 step per rev motor
+mm_per_step = (math.pi * 8) / (8 * 200)  
+
+# measured from graph 120mm long experiment
+mm_per_pulse = (math.pi * 13) / 1600
 
 with open(argv[1]) as fh:
     data = pickle.load(fh)
@@ -16,8 +20,7 @@ for e in data['enc']:
 
 for p in data['pos']:
     pos.append(p * mm_per_step)
-print data['pos'][-1]
-from scipy import stats
+
 print(stats.pearsonr(enc, pos))
 slope, intercept, r_value, p_value, std_err = stats.linregress(enc, pos)
 print(slope, intercept, r_value, p_value, std_err)
@@ -29,4 +32,3 @@ plt.ylabel('pos')
 plt.grid(True)
 plt.title('screw uniformity')
 plt.show()
-
