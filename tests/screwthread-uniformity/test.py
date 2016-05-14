@@ -35,8 +35,6 @@ data = {
     }
 
 send(0)  # reset the counter
-send(800)
-exit(0)
 steps = 20000
 steps_per_send = 20 
 for i in range(steps):
