@@ -10024,6 +10024,7 @@ Source: www.kingbright.com</description>
 <sheets>
 <sheet>
 <plain>
+<text x="101.6" y="43.18" size="1.778" layer="97">Coil OUT</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="76.2" y="17.78" smashed="yes">
