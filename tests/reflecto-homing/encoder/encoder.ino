@@ -22,12 +22,10 @@ void loop()
         memcpy(&steps, &buf, 2);
 
         // reset encoder if get 0 steps
-        /*
         if(steps == 0)
         {
             myEnc.write(0);
         }
-        */
         send_pos(myEnc.read());
     }
     digitalWrite(LED, false);
