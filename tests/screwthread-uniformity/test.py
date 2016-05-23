@@ -36,9 +36,12 @@ data = {
     }
 
 send(0)  # reset the counter
-steps = 20000
+data['enc'].append(0)
+data['pos'].append(0)
+steps_per_rev = 1600
 steps_per_send = 20  # decrease this if get timeouts on send()
-for i in range(steps):
+steps = 10 * (steps_per_rev / steps_per_send)
+for i in range(1, steps):
     encpos = send(+steps_per_send)
     data['enc'].append(encpos)
     data['pos'].append((i * steps_per_send))

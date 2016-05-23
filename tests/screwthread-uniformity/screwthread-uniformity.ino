@@ -62,12 +62,13 @@ void bsR()
   sbi(PORTD,1);
 }
 
-
+const int pwm = 150;
 void setup() {
   //load our config from eeprom
 
   Serial.begin(115200);
-  digitalWrite(led,HIGH);
+  pinMode(led, OUTPUT );
+  digitalWrite(led,true);
 
   pinMode(MS1, OUTPUT );
   pinMode(MS2, OUTPUT );
@@ -79,8 +80,8 @@ void setup() {
   pinMode( STEPL, OUTPUT );
   pinMode( STEPR, OUTPUT );
 
-  analogWrite(PWML, 100);
-  analogWrite(PWMR, 100);
+  analogWrite(PWML, pwm);
+  analogWrite(PWMR, pwm);
 
   digitalWrite(MS1, true );
   digitalWrite(MS2, true);
@@ -104,10 +105,14 @@ void loop()
         char buf[2];
         Serial.readBytes(buf, 2);
         memcpy(&steps, &buf, 2);
+        digitalWrite(led, false);
 
         // reset encoder if get 0 steps
         if(steps == 0)
+        {
             myEnc.write(0);
+            send_pos(myEnc.read());
+        }
     }
 
     if(steps > 0)
@@ -117,7 +122,10 @@ void loop()
         steps --;
         delay(step_d);
         if(steps == 0)
+        {
             send_pos(myEnc.read());
+            digitalWrite(led, true);
+        }
     }
     if(steps < 0)
     {
@@ -126,7 +134,10 @@ void loop()
         steps ++;
         delay(step_d);
         if(steps == 0)
+        {
             send_pos(myEnc.read());
+            digitalWrite(led, true);
+        }
     }
 }
 

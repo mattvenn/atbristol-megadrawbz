@@ -1,6 +1,6 @@
 # Testing reflective homing
 
-![setup](setup.svg)
+![setup](ref_homing.jpg)
 
 * 1600 count encoder with thread wrapped twice
 * 8 time microstepping

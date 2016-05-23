@@ -2,13 +2,15 @@
 
 ![setup](setup.svg)
 
+![photo](linearity.jpg)
+
 * standard M10 threaded bar mounted to NEMA17 200 steps per rev stepper
 * 8 time microstepping
 * 12v
 * 0.2A
 * 130g weight
 
-[Test program](test.py) sends 20 steps 20k, recording encoder position at each 20 step interval.
+[Test program](test.py) sends steps for 10 revolutions, recording encoder position at each 20 step interval.
 
 [firmware](screwthread-uniformity.ino) is running on Arduino.
 
