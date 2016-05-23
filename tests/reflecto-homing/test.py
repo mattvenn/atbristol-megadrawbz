@@ -1,4 +1,5 @@
 import serial
+import random
 import pickle
 import struct
 import time
@@ -32,29 +33,23 @@ def send(pos, port):
     pos, = struct.unpack('<L',bin)
     return pos
 
-data = { 'enc' : [], 'steps' : [] }
-
+data = { 'move_steps' : [], 'home_steps' : [] }
 logging.info("starting")
 # reset the counter
 for i in range(50):
     logging.info("test %d" % i)
-    # reset encoder
-    send(0, enc_port)
 
     # move motor, which then homes
-    steps = 2000
-    logging.info("moving %d steps" % steps)
-    home_steps = send(steps, serial_port)
+#    move_steps = random.randint(1000,4000)
+    move_steps = 2000
+
+    logging.info("moving %d steps" % move_steps)
+    home_steps = send(move_steps, serial_port)
     logging.info("home took %d steps" % home_steps)
 
-    # read the error
-    error = send(1,enc_port)
-    # in case long wraps
-    if error > 2 ** 16:
-        error -= 2 ** 32;
-    logging.info("error = %d" % error)
-    data['enc'].append(error)
-    data['steps'].append(home_steps)
+    data['home_steps'].append(home_steps)
+    data['move_steps'].append(move_steps)
+    time.sleep(0.5)
 
 with open('home_errors.pkl', 'w') as fh:
     pickle.dump(data, fh)
