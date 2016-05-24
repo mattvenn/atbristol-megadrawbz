@@ -1,5 +1,9 @@
 # Testing reflective homing
 
+This method of homing is interesting to explore because it means our home point can be in the middle of the robot's range rather than at the edges. The edges are harder to get to because if the motors aren't co-ordinated (like at power on) there can be too much tension in the strings.
+
+It's also interesting because if we can sense the string on the spool we have a 1 bit absolute position sensor. This means even if this method can't provide precision homing, it will help move the motors to a safe starting place before a more traditional homing method is used.
+
 ![setup](ref_homing.jpg)
 
 * 1600 count encoder with thread wrapped twice
