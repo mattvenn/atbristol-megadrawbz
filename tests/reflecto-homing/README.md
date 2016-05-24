@@ -16,6 +16,6 @@ It's also interesting because if we can sense the string on the spool we have a 
 
 ## Results
 
-Test shows the homing is accurate to within +- 0.25mm. However, the results are susceptible to changes in ambient light.
+Test shows the homing is accurate to within +- 0.15mm. However, the results are susceptible to changes in ambient light.
 
 ![errors.png](errors.png)
