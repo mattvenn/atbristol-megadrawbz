@@ -4,11 +4,10 @@ import matplotlib.pyplot as plt
 from scipy import stats
 from sys import argv
 
-# 8mm screw thread depth, 8 time multistep on 200 step per rev motor
-mm_per_step = (math.pi * 8) / (8 * 200)  
-
-# measured from graph 120mm long experiment
-mm_per_pulse = (math.pi * 13) / 1600
+# 10mm screw thread depth, 8 time multistep on 200 step per rev motor
+mm_per_step = (math.pi * 10) / (8 * 200)  
+print(mm_per_step)
+mm_per_pulse = (math.pi * 12.0) / 1600
 
 with open(argv[1]) as fh:
     data = pickle.load(fh)
@@ -16,6 +15,7 @@ with open(argv[1]) as fh:
 enc = []
 pos = []
 for e in data['enc']:
+    print e
     enc.append(e * mm_per_pulse)
 
 for p in data['pos']:

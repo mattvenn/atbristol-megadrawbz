@@ -10,7 +10,6 @@
 #define LIMITL 5
 #define LIMITR 13 
 
-Encoder myEnc(LIMITL, LIMITR);
 
 #define MS1 8
 #define MS2 9
@@ -24,6 +23,7 @@ Encoder myEnc(LIMITL, LIMITR);
 #define GPIO1_IN A7
 #define GPIO2_IN A11
 
+Encoder myEnc(GPIO1, GPIO2);
 
 #ifndef cbi
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
@@ -34,6 +34,7 @@ Encoder myEnc(LIMITL, LIMITR);
 #define BIT_TST(REG, bit, val) ( ( (REG & (1UL << (bit) ) ) == ( (val) << (bit) ) ) )
 
 void send_pos(unsigned long pos);
+void home();
 
 void fsL()
 {
@@ -86,33 +87,23 @@ void setup() {
   digitalWrite(MS1, true );
   digitalWrite(MS2, true);
 
-  pinMode( GPIO1, INPUT );
-  pinMode( GPIO2, INPUT );
+//  pinMode( GPIO1, INPUT );
+//  pinMode( GPIO2, INPUT );
 //  pinMode( LIMITL, INPUT );
-//  pinMode( LIMITR, INPUT );
+  pinMode( LIMITR, INPUT );
 }
 
 // the loop routine runs over and over again forever:
 int steps = 0;
 const int step_d = 1;
+const int home_d = 4;
 void loop() 
 {
-    // regularly update encoder as it's not on interrupts
-    myEnc.read();
-
     if(Serial.available() == 2)
     {
         char buf[2];
         Serial.readBytes(buf, 2);
         memcpy(&steps, &buf, 2);
-        digitalWrite(led, false);
-
-        // reset encoder if get 0 steps
-        if(steps == 0)
-        {
-            myEnc.write(0);
-            send_pos(myEnc.read());
-        }
     }
 
     if(steps > 0)
@@ -123,22 +114,39 @@ void loop()
         delay(step_d);
         if(steps == 0)
         {
-            send_pos(myEnc.read());
-            digitalWrite(led, true);
+            home();
         }
     }
-    if(steps < 0)
+}
+
+void home()
+{
+    int home_steps = 0;
+    //find home
+    while(digitalRead(LIMITR))
     {
         fsR();
         fsL();
-        steps ++;
         delay(step_d);
-        if(steps == 0)
-        {
-            send_pos(myEnc.read());
-            digitalWrite(led, true);
-        }
+        home_steps ++;
     }
+    //back off
+    for( int i = 0; i < 400; i ++)
+    {
+        bsR();
+        bsL();
+        delay(step_d);
+        home_steps --;
+    }
+    //wind back slower
+    while(digitalRead(LIMITR))
+    {
+        fsR();
+        fsL();
+        delay(home_d);
+        home_steps ++;
+    }
+    send_pos(home_steps);
 }
 
 void send_pos(unsigned long pos)
