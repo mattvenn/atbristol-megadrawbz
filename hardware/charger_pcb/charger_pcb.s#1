@@ -8483,7 +8483,6 @@ Source: www.kingbright.com</description>
 <pinref part="U$1" gate="G$1" pin="P$1"/>
 <pinref part="U$2" gate="G$1" pin="P$2"/>
 <wire x1="54.61" y1="48.26" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
-<junction x="48.26" y="48.26"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -8562,7 +8561,6 @@ Source: www.kingbright.com</description>
 <wire x1="38.1" y1="15.24" x2="35.56" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$1"/>
 <wire x1="72.39" y1="48.26" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
-<junction x="78.74" y="48.26"/>
 </segment>
 </net>
 <net name="N$3" class="0">

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1662,9 +1662,9 @@ Spectrol</description>
 <attribute name="NAME" x="33.985" y="12.88" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="33.735" y="12.32" size="1.27" layer="27"/>
 </element>
-<element name="R2" library="rcl" package="R0805" value="10K" x="21.41" y="17.77" smashed="yes" rot="R180">
-<attribute name="NAME" x="22.045" y="16.3" size="0.8128" layer="25" rot="R180"/>
-<attribute name="VALUE" x="22.045" y="20.31" size="1.27" layer="27" rot="R180"/>
+<element name="R2" library="rcl" package="R0805" value="10K" x="21.61" y="17.07" smashed="yes" rot="R180">
+<attribute name="NAME" x="22.245" y="15.6" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="22.245" y="19.61" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R5" library="rcl" package="R0805" value="470" x="32.42" y="21.91" smashed="yes" rot="R90">
 <attribute name="NAME" x="34.65" y="20.275" size="0.8128" layer="25" rot="R90"/>
@@ -1771,10 +1771,10 @@ Spectrol</description>
 <wire x1="30.9" y1="10.6" x2="30.9" y2="10.73" width="0.3048" layer="1"/>
 <wire x1="30.9" y1="10.73" x2="31.58" y2="11.41" width="0.3048" layer="1"/>
 <contactref element="X5" pad="1"/>
-<wire x1="30.83" y1="10.01" x2="30.83" y2="8.23" width="0.3048" layer="1"/>
 <wire x1="30.83" y1="8.23" x2="30.6" y2="8" width="0.3048" layer="1"/>
 <wire x1="30.6" y1="8" x2="30.6" y2="4.6" width="0.3048" layer="1"/>
 <wire x1="30.6" y1="4.6" x2="30.8" y2="4.4" width="0.3048" layer="1"/>
+<wire x1="30.83" y1="10.01" x2="30.83" y2="8.23" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="X2" pad="1"/>
@@ -1836,7 +1836,7 @@ Spectrol</description>
 <wire x1="31.85" y1="9.99" x2="31.83" y2="10.01" width="0.254" layer="1"/>
 <wire x1="29" y1="13" x2="26" y2="13" width="0.254" layer="1"/>
 <wire x1="26" y1="13" x2="25.73" y2="12.48" width="0.254" layer="1"/>
-<wire x1="20.46" y1="17.77" x2="20.46" y2="17.46" width="0.3048" layer="1"/>
+<wire x1="20.66" y1="17.07" x2="20.46" y2="17.46" width="0.3048" layer="1"/>
 <wire x1="20.46" y1="17.46" x2="19" y2="16" width="0.3048" layer="1"/>
 <via x="19" y="16" extent="1-16" drill="0.6"/>
 <wire x1="19" y1="16" x2="20" y2="16" width="0.3048" layer="16"/>
@@ -1916,7 +1916,7 @@ Spectrol</description>
 <wire x1="32.98" y1="12.16" x2="33.91" y2="12.16" width="0.254" layer="1"/>
 <wire x1="33.91" y1="12.16" x2="34" y2="12.25" width="0.254" layer="1"/>
 <via x="34" y="12.25" extent="1-16" drill="0.5"/>
-<wire x1="22.36" y1="17.77" x2="22.36" y2="17.64" width="0.3048" layer="1"/>
+<wire x1="22.56" y1="17.07" x2="22.36" y2="17.64" width="0.3048" layer="1"/>
 <wire x1="22.36" y1="17.64" x2="24" y2="16" width="0.3048" layer="1"/>
 <via x="24" y="16" extent="1-16" drill="0.6"/>
 <wire x1="24" y1="16" x2="33" y2="16" width="0.3048" layer="16"/>
