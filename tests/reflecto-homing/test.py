@@ -14,14 +14,6 @@ serial_port.timeout=12
 serial_port.baudrate=115200
 serial_port.open()
 
-port_name = '/dev/ttyACM1'
-logging.info("opening port " + port_name)
-enc_port=serial.Serial()
-enc_port.port=port_name
-enc_port.timeout=3
-enc_port.baudrate=115200
-enc_port.open()
-
 time.sleep(2)
 
 def send(pos, port):
