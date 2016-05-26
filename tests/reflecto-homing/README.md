@@ -39,5 +39,5 @@ Test shows the homing is accurate to within +- 0.15mm. However, the results are 
 
 * same as last test but sensor rotated 90
 
-![errors.png](errors-dyneema-screwthread-caps-rotated.png)
+![errors.png](errors-dyneema-screw-caps-rotated.png)
 [data](home_errors-dyneema-screwthread-caps-rotated.pkl)
