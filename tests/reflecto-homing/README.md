@@ -27,12 +27,17 @@ Test shows the homing is accurate to within +- 0.15mm. However, the results are 
 ![errors.png](errors-dyneema.png)
 [data](home_errors-dyneema.pkl)
 
+* black 1mm dyneema on aluminium spool, screwthread 1.3mm
+
+![errors.png](errors-dyneema-screwth.png)
+[data](home_errors-dyneema-screwthread.pkl)
+
 * 20uf cap on opto supply and 100nf on opto output, slowed home speed
 
-![errors.png](errors-dyneema-caps.png)
-[data](home_errors-dyneema-caps.pkl)
+![errors.png](errors-dyneema-screw-caps.png)
+[data](home_errors-dyneema-screwthread-caps.pkl)
 
 * same as last test but sensor rotated 90
 
-![errors.png](errors-dyneema-caps-rotated.png)
-[data](home_errors-dyneema-caps-rotated.pkl)
+![errors.png](errors-dyneema-screwthread-caps-rotated.png)
+[data](home_errors-dyneema-screwthread-caps-rotated.pkl)
