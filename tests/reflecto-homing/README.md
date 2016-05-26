@@ -29,7 +29,7 @@ Test shows the homing is accurate to within +- 0.15mm. However, the results are 
 
 * black 1mm dyneema on aluminium spool, screwthread 1.3mm
 
-![errors.png](errors-dyneema-screwth.png)
+![errors.png](errors-dyneema-screw.png)
 [data](home_errors-dyneema-screwthread.pkl)
 
 * 20uf cap on opto supply and 100nf on opto output, slowed home speed
