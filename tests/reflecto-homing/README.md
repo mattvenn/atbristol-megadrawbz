@@ -27,3 +27,12 @@ Test shows the homing is accurate to within +- 0.15mm. However, the results are 
 ![errors.png](errors-dyneema.png)
 [data](home_errors-dyneema.pkl)
 
+* 20uf cap on opto supply and 100nf on opto output, slowed home speed
+
+![errors.png](errors-dyneema-caps.png)
+[data](home_errors-dyneema-caps.pkl)
+
+* same as last test but sensor rotated 90
+
+![errors.png](errors-dyneema-caps-rotated.png)
+[data](home_errors-dyneema-caps-rotated.pkl)

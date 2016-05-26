@@ -1,11 +1,12 @@
+#!/usr/bin/env python
 import math
 import pickle
 import matplotlib.pyplot as plt
 from scipy import stats
 from sys import argv
 
-mm_per_pulse = (math.pi * 13.5) / 1600
-mm_per_step = (math.pi * 10) / 1600
+mm_per_pulse = (math.pi * 13.5) / 1600.0
+mm_per_step = (math.pi * 10.0) / 1600.0
 
 with open(argv[1]) as fh:
     data = pickle.load(fh)

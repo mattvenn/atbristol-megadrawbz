@@ -96,7 +96,7 @@ void setup() {
 // the loop routine runs over and over again forever:
 int steps = 0;
 const int step_d = 1;
-const int home_d = 4;
+const int home_d = 6;
 void loop() 
 {
     if(Serial.available() == 2)
