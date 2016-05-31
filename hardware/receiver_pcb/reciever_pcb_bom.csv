@@ -15,7 +15,7 @@ LED1,,LEDCHIP-LED0805,CHIP-LED0805,LED,,http://uk.rs-online.com/web/p/visible-le
 LED2,,LEDCHIP-LED0805,CHIP-LED0805,LED,,http://uk.rs-online.com/web/p/visible-leds/9154768/,
 R1,3.01K,R-EU_R0805,R0805,"RESISTOR, European symbol",6791349,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6791349/,
 R2,10K,R-EU_R0805,R0805,"RESISTOR, European symbol",2230562,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2230562/,
-R3,22k,Pot,,Charge limiting pot,,,
+R3,22k,Pot,,Charge limiting pot,5219754,http://uk.rs-online.com/web/p/trimmer-resistors/5219754/,
 R4,470,R-EU_R0805,R0805,"RESISTOR, European symbol",2230376,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2230376/,
 R5,470,R-EU_R0805,R0805,"RESISTOR, European symbol",2230376,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2230376/,
 U$1,LT4120,LT4120,QFN16,,,,"Matt has them, for free!"
