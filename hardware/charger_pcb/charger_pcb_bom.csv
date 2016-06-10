@@ -1,13 +1,13 @@
 Qty,Value,Device,Package,Parts,Description,RS code,Link
 2,,AK500/2,AK500/2,"X1, X2",CONNECTOR,2204260,http://uk.rs-online.com/web/p/pcb-terminal-blocks/2204260/
-1,,LEDCHIP-LED0805,CHIP-LED0805,POWER,LED,8886057,http://uk.rs-online.com/web/p/visible-leds/8886057/
+1,,LEDCHIP-LED0805,CHIP-LED0805,POWER,LED,8886057,http://uk.rs-online.com/web/p/visible-leds/9154768/
 2,,N-MOSFET-SO8S,SO-08,"Q1, Q2",N-Channel MOSFET,915-4960,http://uk.rs-online.com/web/p/mosfet-transistors/9154960/
 1,0.01uF,C-EUC0805,C0805,C2,"CAPACITOR, European symbol",4614013,http://uk.rs-online.com/web/p/ceramic-multilayer-capacitors/4614013/
 1,0.01uf,C-EUC0805,C0805,C1,"CAPACITOR, European symbol",4614013,http://uk.rs-online.com/web/p/ceramic-multilayer-capacitors/4614013/
-1,0.3uF,C-EUC0805,C0805,C3,"CAPACITOR, European symbol",,
-2,100R,R-EU_R0805,R0805,"R1, R2","RESISTOR, European symbol",,
+1,0.3uF,C-EUC0805,C0805,C3,"CAPACITOR, European symbol",6983421,http://uk.rs-online.com/web/p/ceramic-multilayer-capacitors/6983421/
+2,100R,R-EU_R0805,R0805,"R1, R2","RESISTOR, European symbol",6790807,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6790807/
 1,16VZ,ZENER-DIODESOD80C,SOD80C,D2,Z-Diode,7598775,http://uk.rs-online.com/web/p/zener-diodes/7598775/
 1,16vZ,ZENER-DIODESOD80C,SOD80C,D1,Z-Diode,7598775,http://uk.rs-online.com/web/p/zener-diodes/7598775/
-1,220R,R-EU_R0805,R0805,R3,"RESISTOR, European symbol",,
+1,220R,R-EU_R0805,R0805,R3,"RESISTOR, European symbol",2230332,http://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2230332/
 2,40V2A,MBRA340T3,SMA,"D3, D4",Surface Mount Schottky Power Rectifier,708-2337,http://uk.rs-online.com/web/p/rectifier-schottky-diodes/7082337/
 2,68uH,L-EUL5650M,L5650M,"L1, L2","INDUCTOR, European symbol",6924930,http://uk.rs-online.com/web/p/wire-wound-surface-mount-inductors/6924930/
