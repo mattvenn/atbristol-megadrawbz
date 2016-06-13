@@ -15,7 +15,7 @@ our calculations show that 0.3mm error is acceptable.
 
 ## Setup
 
-![setup](ref_homing.jpg)
+![setup](slider-homing.jpg)
 
 * 8 time microstepping
 * 12v
