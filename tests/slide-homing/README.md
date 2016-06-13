@@ -1,10 +1,17 @@
 # Testing sliding homing
 
-Same as the reflecto homing but using a slider on a screwthread. Position is
-picked up with an opto. Slider is long enough to give 1 bit absolute positioning. 
+The [reflective homing
+method](https://github.com/mattvenn/atbristol-megadrawbz/tree/master/tests/reflecto-homing) had some good benefits, but suffered from unreliability
+with changing light conditions. In particular we wanted to keep the absolute
+positioning to aid with homing. Ideally we want the method to be good enough for
+homing (better than 0.3mm error).
+
+For this test we coupled the spool with a screwthread and used the thread to
+drive a slider that interrupted the photo interrupter.
 
 Results show better than opto homing (0.12mm max error on a 19mm spool), and
-much more reliable.
+much more reliable. With a bit more tuning we should get even lower errors, but
+our calculations show that 0.3mm error is acceptable.
 
 ## Setup
 
