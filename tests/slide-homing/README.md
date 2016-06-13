@@ -15,7 +15,7 @@ much more reliable.
 * 0.2A
 * m6 threaded bar, rexroth extrusion for rail
 * direct drive stepper
-* 10k R on opto collector
+* 10k R on opto collector [Optek OPB815L](http://uk.rs-online.com/web/p/slotted-optical-switches/1944024/)
 * 35mm diameter spool
 
 ## Results
