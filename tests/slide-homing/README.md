@@ -17,6 +17,8 @@ our calculations show that 0.3mm error is acceptable.
 
 ![setup](slider-homing.jpg)
 
+[Video here](https://www.youtube.com/watch?v=r71VegIOap8&feature=youtu.be)
+
 * 8 time microstepping
 * 12v
 * 0.2A
