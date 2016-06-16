@@ -1,14 +1,27 @@
 # Stepper choice
 
-with a spool d of 35mm, to adequately lift gondola and resist tampering (extra
-1kg) must provide a torque of 1Nm.
+specs:
 
-aiming at:
+* 1Nm to provide resistance against tampering
+* string on a 35mm spool to reduce wrapping (and therefore hyp error)
+* hyp error <= 0.2mm over travel
+* max spd >= 150mm/s
+* res <= 0.2 mm/step
 
-    35mm spool
-    max spd = 140mm/s
-    res = 0.137 mm/step
-    hyp error = 0.17mm over travel
+# chosen option:
+
+* motor: http://uk.rs-online.com/web/p/stepper-motors/5350423/
+* 1nm at 2.8A, 200 steps per rev
+* 1 : 1.8 pulley ratio
+
+[datasheet](http://docs-europe.electrocomponents.com/webdocs/07e2/0900766b807e2898.pdf)
+
+We should be able to achieve 1nm with about half the rated current but if
+necessary we can increase the current. We also have options to increase torque
+by decreasing microstepping at the cost resolution.
+
+At 2000hz step freq, we achieve 150mm/s and datasheet says torque is derated by
+20%.
 
 ## option 1
 
