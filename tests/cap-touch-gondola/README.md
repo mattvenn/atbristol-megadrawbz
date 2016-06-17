@@ -12,6 +12,8 @@ So this test is to see if the gondola can sense when it's touched, and send a si
 
 ![captouch.jpg](captouch.jpg)
 
+[video](https://www.youtube.com/watch?v=7M-Ta0E2XPM&feature=youtu.be)
+
 a 1M resistor is connected between 2 pins. One of the pins is also connected to the aluminium of the gondola.
 
 # test code
