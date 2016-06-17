@@ -8,6 +8,8 @@ However if the gondola is lifted if the spools are unwinding the string could ge
 
 So this test is to see if the gondola can sense when it's touched, and send a signal to linuxcnc to pause the drawing.
 
+We were worried that without a ground connection the capacitive touch method wouldn't work, but it seems to work fine.
+
 # method
 
 ![captouch.jpg](captouch.jpg)
