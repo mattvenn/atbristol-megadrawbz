@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/mattvenn/work/atbristol-megadrawbz/hardware/gondola_pcb/gondola.sch)
-    (date "Mon 20 Jun 2016 14:26:31 CEST")
+    (date "Wed 22 Jun 2016 11:26:22 CEST")
     (tool "Eeschema (2015-06-25 BZR 5821)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -471,7 +471,7 @@
     (library (logical regul)
       (uri /usr/local/share/kicad/library/regul.lib))
     (library (logical xbee)
-      (uri libs/xbee.lib))
+      (uri /home/mattvenn/work/atbristol-megadrawbz/hardware/gondola_pcb/libs/xbee.lib))
     (library (logical atmel)
       (uri /usr/local/share/kicad/library/atmel.lib)))
   (nets

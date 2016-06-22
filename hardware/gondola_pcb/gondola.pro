@@ -1,10 +1,6 @@
-update=Mon 20 Jun 2016 12:57:13 CEST
+update=Wed 22 Jun 2016 13:13:14 CEST
 version=1
-last_client=eeschema
-[general]
-version=1
-RootSch=
-BoardNm=
+last_client=kicad
 [pcbnew]
 version=1
 LastNetListRead=
@@ -62,3 +58,15 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=libs/xbee
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+[general]
+version=1
