@@ -1,0 +1,184 @@
+EESchema Schematic File Version 2
+LIBS:bbbbbb-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:xbee
+LIBS:drv2250
+LIBS:tcn75
+LIBS:bbbbbb-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L tcn75 U7
+U 1 1 576D5B12
+P 5150 3500
+F 0 "U7" H 5050 3750 60  0000 C CNN
+F 1 "tcn75" H 5100 3200 60  0000 C CNN
+F 2 "Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm" H 5150 3500 60  0001 C CNN
+F 3 "" H 5150 3500 60  0000 C CNN
+	1    5150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR093
+U 1 1 576D5BA4
+P 5750 3350
+F 0 "#PWR093" H 5750 3200 50  0001 C CNN
+F 1 "+3.3V" H 5750 3490 50  0000 C CNN
+F 2 "" H 5750 3350 60  0000 C CNN
+F 3 "" H 5750 3350 60  0000 C CNN
+	1    5750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR094
+U 1 1 576D5BBA
+P 4750 3700
+F 0 "#PWR094" H 4750 3450 50  0001 C CNN
+F 1 "Earth" H 4750 3550 50  0001 C CNN
+F 2 "" H 4750 3700 60  0000 C CNN
+F 3 "" H 4750 3700 60  0000 C CNN
+	1    4750 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3650 4750 3700
+Text GLabel 4300 3350 0    60   Input ~ 0
+sda
+Text GLabel 4300 3450 0    60   Input ~ 0
+scl
+$Comp
+L R R31
+U 1 1 576D5BD9
+P 4450 3200
+F 0 "R31" V 4530 3200 50  0000 C CNN
+F 1 "R" V 4450 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4380 3200 30  0001 C CNN
+F 3 "" H 4450 3200 30  0000 C CNN
+	1    4450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R32
+U 1 1 576D5C54
+P 4600 3300
+F 0 "R32" V 4680 3300 50  0000 C CNN
+F 1 "R" V 4600 3300 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4530 3300 30  0001 C CNN
+F 3 "" H 4600 3300 30  0000 C CNN
+	1    4600 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3450 5600 3700
+Connection ~ 5600 3550
+$Comp
+L Earth #PWR095
+U 1 1 576D5C83
+P 5600 3700
+F 0 "#PWR095" H 5600 3450 50  0001 C CNN
+F 1 "Earth" H 5600 3550 50  0001 C CNN
+F 2 "" H 5600 3700 60  0000 C CNN
+F 3 "" H 5600 3700 60  0000 C CNN
+	1    5600 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 3650
+Wire Wire Line
+	4300 3350 4750 3350
+Connection ~ 4450 3350
+Wire Wire Line
+	4300 3450 4750 3450
+Connection ~ 4600 3450
+NoConn ~ 4750 3550
+$Comp
+L +3.3V #PWR096
+U 1 1 576D5CDD
+P 4450 3050
+F 0 "#PWR096" H 4450 2900 50  0001 C CNN
+F 1 "+3.3V" H 4450 3190 50  0000 C CNN
+F 2 "" H 4450 3050 60  0000 C CNN
+F 3 "" H 4450 3050 60  0000 C CNN
+	1    4450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR097
+U 1 1 576D5CF4
+P 4600 3150
+F 0 "#PWR097" H 4600 3000 50  0001 C CNN
+F 1 "+3.3V" H 4600 3290 50  0000 C CNN
+F 2 "" H 4600 3150 60  0000 C CNN
+F 3 "" H 4600 3150 60  0000 C CNN
+	1    4600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 576D5D13
+P 5400 2950
+F 0 "C6" H 5425 3050 50  0000 L CNN
+F 1 "C" H 5425 2850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5438 2800 30  0001 C CNN
+F 3 "" H 5400 2950 60  0000 C CNN
+	1    5400 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3350 5750 3350
+Wire Wire Line
+	5400 3100 5650 3100
+Wire Wire Line
+	5650 3100 5650 3350
+Connection ~ 5650 3350
+$Comp
+L Earth #PWR098
+U 1 1 576D5DEB
+P 5400 2800
+F 0 "#PWR098" H 5400 2550 50  0001 C CNN
+F 1 "Earth" H 5400 2650 50  0001 C CNN
+F 2 "" H 5400 2800 60  0000 C CNN
+F 3 "" H 5400 2800 60  0000 C CNN
+	1    5400 2800
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

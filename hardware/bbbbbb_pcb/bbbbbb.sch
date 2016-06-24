@@ -31,12 +31,13 @@ LIBS:contrib
 LIBS:valves
 LIBS:xbee
 LIBS:drv2250
+LIBS:tcn75
 LIBS:bbbbbb-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 6
 Title ""
 Date ""
 Rev ""
@@ -164,8 +165,6 @@ NoConn ~ 2650 4350
 NoConn ~ 2650 4250
 NoConn ~ 2650 4150
 NoConn ~ 2650 4050
-NoConn ~ 2650 3450
-NoConn ~ 2150 3450
 $Comp
 L CONN_01X08 7seg1
 U 1 1 575EB311
@@ -1577,4 +1576,36 @@ Wire Wire Line
 	10100 3400 9700 3400
 Wire Wire Line
 	10100 3500 9700 3500
+$Sheet
+S 7550 1850 1000 350 
+U 576D4B09
+F0 "solenoids" 60
+F1 "solenoids.sch" 60
+$EndSheet
+$Comp
+L CONN_01X01 pwm1
+U 1 1 576D5667
+P 4900 2000
+F 0 "pwm1" H 4900 2100 50  0000 C CNN
+F 1 "CONN_01X01" V 5000 2000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 4900 2000 60  0001 C CNN
+F 3 "" H 4900 2000 60  0000 C CNN
+	1    4900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2000 4700 1750
+Wire Wire Line
+	4700 1750 4750 1750
+Connection ~ 4750 1750
+$Sheet
+S 6800 1500 550  200 
+U 576D5A6D
+F0 "temp" 60
+F1 "temp.sch" 60
+$EndSheet
+Text GLabel 2650 3450 2    60   Input ~ 0
+sda
+Text GLabel 2150 3450 0    60   Input ~ 0
+scl
 $EndSCHEMATC

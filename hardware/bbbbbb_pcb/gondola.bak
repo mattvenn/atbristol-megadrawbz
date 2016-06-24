@@ -31,12 +31,13 @@ LIBS:contrib
 LIBS:valves
 LIBS:xbee
 LIBS:drv2250
+LIBS:tcn75
 LIBS:bbbbbb-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -49,10 +50,10 @@ $EndDescr
 Text GLabel 2850 2850 0    60   Input ~ 0
 gondola-charge
 $Comp
-L CONN_01X02 gondola
+L CONN_01X02 gondola1
 U 1 1 5761312D
 P 4350 2450
-F 0 "gondola" H 4350 2600 50  0000 C CNN
+F 0 "gondola1" H 4350 2600 50  0000 C CNN
 F 1 "gondola charge" V 4450 2450 50  0000 C CNN
 F 2 "Connect:AK300-2" H 4350 2450 60  0001 C CNN
 F 3 "" H 4350 2450 60  0000 C CNN
