@@ -1,0 +1,101 @@
+component xbee "xbee serial";
+pin in float in;
+pin out float out;
+
+function _;
+option extra_setup;
+license "GPL"; // indicates GPL v2 or later
+;;
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <termios.h>
+#include <fcntl.h>
+
+int fd;
+
+typedef struct {
+    char pos;
+    char cksum;
+} TX;
+
+typedef struct {
+    unsigned short batt;
+    unsigned char cksum;
+} RX;
+
+
+EXTRA_SETUP()
+{
+    if ((fd = open("/dev/ttyO1", O_RDWR))<0)
+    {
+        printf("UART: Failed to open the file.\n");
+        return;
+    }
+
+    //
+    struct termios options; // the termios structure is vital
+    tcgetattr(fd, &options); // sets the parameters associated with file
+
+    // Set up the communications options:
+    // 9600 baud, 8-bit, enable receiver, no modem control lines
+    options.c_cflag = B57600 | CS8 | CREAD | CLOCAL;
+//    options.c_iflag = IGNPAR | ICRNL; // ignore partity errors, CR -> newline
+    tcflush(fd, TCIFLUSH); // discard file information not transmitted
+    tcsetattr(fd, TCSANOW, &options); // changes occur immmediately
+    return 0;
+}
+
+char CRC8(char *data, char len) 
+{
+    char crc = 0x00;
+    while (len--)
+    {
+        char extract = *data++;
+        char tempI;
+        for (tempI = 8; tempI; tempI--) 
+        {
+            char sum = (crc ^ extract) & 0x01;
+            crc >>= 1;
+            if(sum) 
+            {
+                crc ^= 0x8C;
+            }
+            extract >>= 1;
+        }
+    }
+    return crc;
+}
+
+FUNCTION(_)
+{
+    TX tx;
+    RX rx;
+        tx.pos = in;
+        char buf[sizeof(TX)];
+        memcpy(&buf, &tx, sizeof(TX));
+        tx.cksum = CRC8(buf,sizeof(TX)-1);
+        //printf("tx cksum = %x\n", tx.cksum);
+        memcpy(&buf, &tx, sizeof(TX));
+
+        write (fd, buf, sizeof(TX));
+
+        usleep (50 * 1000);             // sleep enough to transmit the 7 plus
+
+        char rx_buf[sizeof(RX)];
+        int n = read (fd, rx_buf, sizeof(RX));
+        //printf("read %d : %x %x %x\n", n, rx_buf[0], rx_buf[1], rx_buf[2]);
+
+        //copy buffer to structure
+        memcpy(&rx, &rx_buf, sizeof(RX));
+        /*
+        if(rx.cksum != CRC8(rx_buf,sizeof(RX)-1))
+        {
+            //printf("bad cksum\n");
+            out = -1;
+        else
+            //printf("batt %d\n", rx.batt);
+         */
+         out = rx.batt;
+
+}
