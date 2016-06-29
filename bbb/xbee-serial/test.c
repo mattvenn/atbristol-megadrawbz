@@ -1,17 +1,9 @@
-component xbee "xbee serial";
-pin in float pos_;
-pin out float batt_;
-pin in float scale = 20.0;
-
-function _;
-option extra_setup;
-license "GPL"; // indicates GPL v2 or later
-;;
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <termios.h>
 #include <fcntl.h>
+#include <string.h>
 
 int fd;
 
@@ -22,13 +14,12 @@ struct {
 
 struct {
     unsigned short batt;
-    unsigned char cksum;
+    char cksum;
 } rx;
 
 #define RX_SIZE 3 //computed as 4 but on the atmel it's 3
 
-
-EXTRA_SETUP()
+void setup()
 {
     if ((fd = open("/dev/ttyO1", O_RDWR))<0)
     {
@@ -36,15 +27,16 @@ EXTRA_SETUP()
         return;
     }
 
+    //
     struct termios options; // the termios structure is vital
     tcgetattr(fd, &options); // sets the parameters associated with file
 
     // Set up the communications options:
-    // 57600 baud, 8-bit, enable receiver, no modem control lines
+    // 9600 baud, 8-bit, enable receiver, no modem control lines
     options.c_cflag = B57600 | CS8 | CREAD | CLOCAL;
+//    options.c_iflag = IGNPAR | ICRNL; // ignore partity errors, CR -> newline
     tcflush(fd, TCIFLUSH); // discard file information not transmitted
     tcsetattr(fd, TCSANOW, &options); // changes occur immmediately
-    return 0;
 }
 
 char CRC8(char *data, char len) 
@@ -68,25 +60,31 @@ char CRC8(char *data, char len)
     return crc;
 }
 
-FUNCTION(_)
+void main(void)
 {
-    tx.pos = pos_ * scale;
-    char buf[sizeof(tx)];
-    memcpy(&buf, &tx, sizeof(tx));
-    tx.cksum = CRC8(buf,sizeof(tx)-1);
-    memcpy(&buf, &tx, sizeof(tx));
+    setup();
+    int i = 0;
+    for(i = 0; i< 100; i+=10)
+    {
+        tx.pos = i; //in;
+        char buf[sizeof(tx)];
+        memcpy(&buf, &tx, sizeof(tx));
+        tx.cksum = CRC8(buf,sizeof(tx)-1);
+        memcpy(&buf, &tx, sizeof(tx));
 
-    write (fd, buf, sizeof(tx));
-    usleep (25 * 1000); // sleep enough time for the chars to get sent
+        write (fd, buf, sizeof(tx));
 
-    char rx_buf[RX_SIZE];
-    int n = read (fd, rx_buf, RX_SIZE);
+        usleep (25 * 1000);             // sleep enough to transmit the 7 plus
 
-    //copy buffer to structure
-    memcpy(&rx, &rx_buf, RX_SIZE);
-    if(rx.cksum != CRC8(rx_buf,RX_SIZE-1))
-        batt_ = -1;
-    else
-        batt_ = rx.batt;
+        char rx_buf[RX_SIZE];
+        int n = read (fd, rx_buf, RX_SIZE);
 
+        //copy buffer to structure
+        memcpy(&rx, &rx_buf, RX_SIZE);
+        printf("read %d : %x %x %x\n", n, rx_buf[0], rx_buf[1], rx_buf[2]);
+        if(rx.cksum != CRC8(rx_buf,RX_SIZE-1))
+            printf("bad cksum\n");
+        else
+            printf("batt %d\n", rx.batt);
+    }
 }
