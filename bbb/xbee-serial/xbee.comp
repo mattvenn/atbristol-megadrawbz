@@ -34,14 +34,12 @@ EXTRA_SETUP()
         return;
     }
 
-    //
     struct termios options; // the termios structure is vital
     tcgetattr(fd, &options); // sets the parameters associated with file
 
     // Set up the communications options:
-    // 9600 baud, 8-bit, enable receiver, no modem control lines
+    // 57600 baud, 8-bit, enable receiver, no modem control lines
     options.c_cflag = B57600 | CS8 | CREAD | CLOCAL;
-//    options.c_iflag = IGNPAR | ICRNL; // ignore partity errors, CR -> newline
     tcflush(fd, TCIFLUSH); // discard file information not transmitted
     tcsetattr(fd, TCSANOW, &options); // changes occur immmediately
     return 0;
@@ -76,16 +74,13 @@ FUNCTION(_)
         char buf[sizeof(TX)];
         memcpy(&buf, &tx, sizeof(TX));
         tx.cksum = CRC8(buf,sizeof(TX)-1);
-        //printf("tx cksum = %x\n", tx.cksum);
         memcpy(&buf, &tx, sizeof(TX));
 
         write (fd, buf, sizeof(TX));
-
-        usleep (50 * 1000);             // sleep enough to transmit the 7 plus
+        usleep (25 * 1000);             // sleep enough
 
         char rx_buf[sizeof(RX)];
         int n = read (fd, rx_buf, sizeof(RX));
-        //printf("read %d : %x %x %x\n", n, rx_buf[0], rx_buf[1], rx_buf[2]);
 
         //copy buffer to structure
         memcpy(&rx, &rx_buf, sizeof(RX));
@@ -97,6 +92,6 @@ FUNCTION(_)
         else
             //printf("batt %d\n", rx.batt);
          */
-         out = rx.batt;
+        out = rx.batt;
 
 }
