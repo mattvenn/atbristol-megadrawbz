@@ -1,0 +1,3 @@
+[submodule "machinekit-bipod"]
+	path = machinekit-bipod
+	url = git@github.com:mattvenn/machinekit-bipod
