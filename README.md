@@ -10,6 +10,7 @@
 
 * [Beagle bone breakout board](hardware/bbbbbb_pcb/)
 * [Pen holder](hardware/gondola_pcb/)
+* [notes on stepper choice](tests/stepper-choice)
 
 ### machinekit/linuxcnc configuration
 
