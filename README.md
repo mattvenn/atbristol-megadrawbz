@@ -16,7 +16,7 @@
 * Robot is controlled with machinekit running on a beaglebone black.
 * Pen holder is controlled via Xbee radio and uses a [custom component] that runs in its own realtime thread.
 
-* [configuration](machinkekit-bipod)
+* [configuration](machinekit-bipod)
 
 ### firmware
 
