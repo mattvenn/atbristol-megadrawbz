@@ -1,3 +1,0 @@
-[submodule "linuxcnc-bipod"]
-	path = linuxcnc-bipod
-	url = git@github.com:mattvenn/linuxcnc-bipod
