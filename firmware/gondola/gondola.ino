@@ -23,10 +23,12 @@ arduino is positioned:
 #define SERVO 9
 #define SERVO_OFF 30
 #define BATT_ADC A0
-#define INTERVAL 5000
+#define INTERVAL 1000
 Servo servo;
 byte CRC8(char *data, byte len);
 unsigned long count = 0;
+unsigned long rx = 0;
+
 SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); //pin 5 is RX
 void setup()
 {
@@ -45,8 +47,9 @@ void loop()
     if(millis() > count + INTERVAL)
     {
         count = millis();
-        Serial.print("t: ");
-        Serial.println(count);
+        Serial.print("rx: ");
+        Serial.println(rx);
+        rx = 0;
     }
 
     int serial_bytes =  xbee_serial.available();
@@ -54,9 +57,11 @@ void loop()
     if(serial_bytes == sizeof(Can))
     {
         Can data;
+        digitalWrite(LED_PIN,HIGH);
         char buf[sizeof(Can)];
         // do something with status?
         int status = xbee_serial.readBytes(buf, sizeof(Can));
+        rx ++;
 
         //copy buffer to structure
         memcpy(&data, &buf, sizeof(Can));
@@ -82,6 +87,7 @@ void loop()
 
         for(int b = 0; b < sizeof(Response); b++)
             xbee_serial.write(rbuf[b]);
+        digitalWrite(LED_PIN,LOW);
     }
     else if (serial_bytes > sizeof(Can))
     {
