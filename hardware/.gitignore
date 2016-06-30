@@ -1,3 +1,5 @@
 *.pdf
 *.gbr
 *.bak
+*.bck
+*-bak
