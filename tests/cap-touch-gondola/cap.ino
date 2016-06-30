@@ -1,8 +1,12 @@
-#include <CapacitiveSensor.h>
+//#include <CapacitiveSensor.h>
+
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
-
+#include <ADCTouch.h>
+ 
+int ref0, ref1;       //reference values to remove offset
+ 
 /*
  * CapitiveSense Library Demo Sketch
  * Paul Badger 2008
@@ -11,7 +15,7 @@
  * Receive pin is the sensor pin - try different amounts of foil/metal on this pin
  */
 
-CapacitiveSensor   cs_4_2 = CapacitiveSensor(4,2);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
+//CapacitiveSensor   cs_4_2 = CapacitiveSensor(4,2);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
 
 // Software SPI (slower updates, more flexible pin options):
 // pin 7 - Serial clock out (SCLK)
@@ -30,12 +34,18 @@ void setup()
    Serial.begin(9600);
   display.begin();
   display.clearDisplay();   // clears the screen and buffer
-  display.setContrast(45);
+  display.setContrast(20);
+    ref0 = ADCTouch.read(A1, 500);    //create reference values to
+ 
+ 
 }
 
 void loop()                    
 {
-    long total1 =  cs_4_2.capacitiveSensor(30);
+    int value0 = ADCTouch.read(A1);   //no second parameter
+ 
+    value0 -= ref0;       //remove offset
+    //long total1 =  cs_4_2.capacitiveSensor(30);
     /*
     if( total1 > 30)
         digitalWrite(led, true);
@@ -49,6 +59,6 @@ void loop()
   display.setCursor(0,0);
   display.setTextSize(2);
   display.setTextColor(BLACK);
-  display.println(total1);
+  display.println(value0);
   display.display();
 }

@@ -29,12 +29,12 @@ data = { 'move_steps' : [], 'home_steps' : [] }
 logging.info("starting")
 # reset the counter
 try:
-    for i in range(50):
+    for i in range(500):
         logging.info("test %d" % i)
 
         # move motor, which then homes
     #    move_steps = random.randint(1000,4000)
-        move_steps = 4000
+        move_steps = 2000
 
         logging.info("moving %d steps" % move_steps)
         home_steps = send(move_steps, serial_port)

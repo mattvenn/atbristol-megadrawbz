@@ -47,3 +47,42 @@ kins needs to be specified with motmod or will default to trivkins.
 joint following errors were fixed (I think) by adding a maximum_acceleration in
 the `[traj]` section.
 
+# Serial setup
+
+    # doesn't play well with the setup.sh that machinekit config uses
+    echo BB-UART1 > /sys/devices/bone_capemgr.*/slots
+    dmesg | grep tty
+
+check connected xbee
+
+    miniterm.py /dev/ttyO1 57600
+    +++
+
+replies with `OK`.
+
+## path
+
+add this to ~/.bashrc:
+
+    PATH=$PATH:/home/machinekit/machinekit/configs/machinekit-bipod
+
+not needed as can do loadusr ./xbee.py
+loadusr needs -W parameter to wait till it initialises, probably why it was
+occasionally failing on pc.
+
+
+# startup issues
+
+    Machine configuration directory is
+    '/home/machinekit/machinekit/configs/machinekit-bipod'
+    Machine configuration file is 'bipod.ini'
+    Starting Machinekit...
+    io started
+    emc/iotask/ioControl.cc 752: can't load tool table.
+    halcmd loadusr io started
+    Loading cape-universal overlay to /sys/devices/bone_capemgr.9/slots
+    X11 connection rejected because of wrong authentication.
+    PRU control files not found in /sys/class/uio/uio0
+    bipod.hal:10: program './setup.sh' failed, returned 1
+    Shutting down and cleaning up Machinekit...
+

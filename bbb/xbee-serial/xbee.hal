@@ -1,6 +1,0 @@
-# components
-loadrt threads name1=test period1=50000000 # 50ms, xbee takes max 25ms
-loadrt xbee 
-addf xbee.0 test
-start
-show pin

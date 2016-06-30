@@ -63,7 +63,7 @@ void bsR()
   sbi(PORTD,1);
 }
 
-const int pwm = 150;
+const int pwm = 80;
 void setup() {
   //load our config from eeprom
 
@@ -95,9 +95,10 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 int steps = 0;
+#define INVERT 
 const int step_d = 400;
-const int home_d = 2000;
-const int backoff_steps = 800;
+const int home_d = 4000;
+const int backoff_steps = 1600;
 void loop() 
 {
     if(Serial.available() == 2)
@@ -124,7 +125,7 @@ void home()
 {
     int home_steps = 0;
     //find home
-    while(! digitalRead(GPIO1))
+    while(INVERT digitalRead(GPIO1))
     {
         fsR();
         fsL();
@@ -140,7 +141,7 @@ void home()
         home_steps --;
     }
     //wind back slower
-    while(! digitalRead(GPIO1))
+    while(INVERT digitalRead(GPIO1))
     {
         fsR();
         fsL();
