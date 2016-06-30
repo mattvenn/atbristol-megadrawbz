@@ -4,7 +4,13 @@ This method of homing is interesting to explore because it means our home point 
 
 It's also interesting because if we can sense the string on the spool we have a 1 bit absolute position sensor. This means even if this method can't provide precision homing, it will help move the motors to a safe starting place before a more traditional homing method is used.
 
-![setup](ref_homing.jpg)
+Test shows the homing is accurate to within +- 0.15mm (on a 19mm spool). However, the results are susceptible to changes in ambient light. With a torch I can produce a 0.5mm error.
+
+## Setup
+
+[Video](https://www.youtube.com/watch?v=r71VegIOap8&feature=youtu.be)
+
+![setup](slider-homing.jpg)
 
 * 1600 count encoder with thread wrapped twice
 * 8 time microstepping
@@ -17,7 +23,6 @@ It's also interesting because if we can sense the string on the spool we have a 
 
 * spool is black nylon with a 1mm thread, string is generic brown braid, about 0.8mm
 
-Test shows the homing is accurate to within +- 0.15mm. However, the results are susceptible to changes in ambient light.
 
 ![errors.png](errors.png)
 [data](home_errors.pkl)
