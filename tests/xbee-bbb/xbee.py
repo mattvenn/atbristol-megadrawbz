@@ -4,7 +4,7 @@ import crcmod
 import time
 crc8_func = crcmod.predefined.mkPredefinedCrcFun("crc-8-maxim")
 
-port_name = '/dev/ttyUSB0'
+port_name = '/dev/ttyO1'
 serial_port=serial.Serial()
 serial_port.port=port_name
 serial_port.timeout=0.5
