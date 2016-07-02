@@ -27,7 +27,7 @@ arduino is positioned:
 #define SERVO 9
 #define SERVO_OFF 30
 #define BATT_ADC A0
-#define INTERVAL 1000
+#define INTERVAL 10000
 
 Servo servo;
 byte CRC8(char *data, byte len);
@@ -57,7 +57,7 @@ void loop()
         Serial.print("rx: ");
         Serial.print(tx.rx_count);
         Serial.print(" err count: ");
-        Serial.print(tx.err_count);
+        Serial.println(tx.err_count);
         tx.batt = analogRead(BATT_ADC);
     }
     
