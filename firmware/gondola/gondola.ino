@@ -1,16 +1,20 @@
 #include <SoftwareSerial.h>
 #include <Servo.h>
 
-typedef struct {
+struct {
     uint8_t amount;
     uint8_t cksum;
-} Can;
+} rx;
 
-typedef struct {
+struct {
     uint16_t batt;
+    uint16_t rx_count;
+    uint16_t err_count;
     uint8_t cksum;
-} Response;
+} tx;
 
+char rx_buf[sizeof(rx)];
+char tx_buf[sizeof(tx)];
 /*
 arduino is positioned:
 * top 5 pins mesh with 9,10,11,12,13
@@ -23,13 +27,13 @@ arduino is positioned:
 #define SERVO 9
 #define SERVO_OFF 30
 #define BATT_ADC A0
-#define INTERVAL 1000
+#define INTERVAL 10000
+
 Servo servo;
 byte CRC8(char *data, byte len);
 unsigned long count = 0;
-unsigned long rx = 0;
 
-SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); //pin 5 is RX
+SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); 
 void setup()
 {
   Serial.begin(115200);
@@ -40,58 +44,56 @@ void setup()
   servo.attach(SERVO);
   servo.write(SERVO_OFF);
   analogReference(INTERNAL);
+  Serial.print("sizeof(rx)=");
+  Serial.println(sizeof(rx));
 }
 
 void loop()
 {
+    // periodically update battery and print stats
     if(millis() > count + INTERVAL)
     {
         count = millis();
         Serial.print("rx: ");
-        Serial.println(rx);
-        rx = 0;
+        Serial.print(tx.rx_count);
+        Serial.print(" err count: ");
+        Serial.println(tx.err_count);
+        tx.batt = analogRead(BATT_ADC);
     }
-
-    int serial_bytes =  xbee_serial.available();
-
-    if(serial_bytes == sizeof(Can))
+    
+    if(xbee_serial.available() == sizeof(rx))
     {
-        Can data;
         digitalWrite(LED_PIN,HIGH);
-        char buf[sizeof(Can)];
         // do something with status?
-        int status = xbee_serial.readBytes(buf, sizeof(Can));
-        rx ++;
+        int status = xbee_serial.readBytes(rx_buf, sizeof(rx));
+        tx.rx_count ++;
 
         //copy buffer to structure
-        memcpy(&data, &buf, sizeof(Can));
+        memcpy(&rx, &rx_buf, sizeof(rx));
         //calculate cksum is ok
-        if(data.cksum != CRC8(buf,sizeof(Can)-1))
+        if(rx.cksum != CRC8(rx_buf,sizeof(rx)-1))
         {
             //ignore broken packet
             Serial.println("err: ck");
+            tx.err_count ++;
             return;
         }
         //only write if amount is moveable
-        if(data.amount < 180)
-            servo.write(data.amount);
+        if(rx.amount < 180)
+            servo.write(rx.amount);
 
-        //send battery data back
-        Response resp;
-        resp.batt = analogRead(BATT_ADC);
-        char rbuf[sizeof(Response)];
-        memcpy(&rbuf, &resp, sizeof(Response));
-        resp.cksum = CRC8(rbuf,sizeof(Response)-1);
+        //send data back
+        memcpy(&tx_buf, &tx, sizeof(tx));
+        tx.cksum = CRC8(tx_buf,sizeof(tx)-1);
 
-        memcpy(&rbuf, &resp, sizeof(Response));
+        memcpy(&tx_buf, &tx, sizeof(tx));
+        xbee_serial.write(tx_buf, sizeof(tx));
 
-        for(int b = 0; b < sizeof(Response); b++)
-            xbee_serial.write(rbuf[b]);
         digitalWrite(LED_PIN,LOW);
     }
-    else if (serial_bytes > sizeof(Can))
+    else if(xbee_serial.available() > sizeof(rx))
     {
-        Serial.println("err: too many bytes");
+        tx.err_count ++;
         xbee_serial.flush();
     }
 }
