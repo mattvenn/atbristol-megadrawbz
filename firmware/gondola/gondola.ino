@@ -1,8 +1,13 @@
-#include <SoftwareSerial.h>
+//#include <SoftwareSerial.h>
 #include <Servo.h>
 #include <ADCTouch.h>
 
-
+int raw = 0;
+long total = 0;
+int samples = 0;
+int average = 0;
+#define AVG_NUM 100
+uint8_t last_amount = 0;
 struct {
     uint8_t amount;
     uint8_t cksum;
@@ -12,16 +17,18 @@ struct {
     uint16_t batt;
     uint16_t rx_count;
     uint16_t err_count;
-    uint8_t flags;
+    uint8_t touch;
+//    uint8_t flags;
     uint8_t cksum;
 } tx;
 
 char rx_buf[sizeof(rx)];
 char tx_buf[sizeof(tx)];
-
+/*
 enum flags {
   FLAG_TOUCH    = 0x01,
 };
+*/
 
 /*
 arduino is positioned:
@@ -47,22 +54,22 @@ unsigned long debug_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
 
-SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); 
+//SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); 
 void setup()
 {
-  Serial.begin(115200);
-  Serial.println("started");
+  Serial.begin(57600);
+//  Serial.println("started");
   pinMode(LED_PIN,OUTPUT);
   pinMode(LED_TOUCH,OUTPUT);
   digitalWrite(LED_PIN,HIGH);
   digitalWrite(LED_TOUCH,HIGH);
-  xbee_serial.begin(57600);
+  //xbee_serial.begin(57600);
   servo.attach(SERVO);
   servo.write(SERVO_OFF);
-  Serial.print("sizeof(rx)=");
-  Serial.println(sizeof(rx));
-  ref = ADCTouch.read(TOUCH, 500);    //create reference values to
+  //Serial.print("sizeof(rx)=");
+  //Serial.println(sizeof(rx));
   delay(1000);
+  ref = ADCTouch.read(TOUCH, 500);    //create reference values to
 }
 
 void clear_adc()
@@ -70,7 +77,7 @@ void clear_adc()
         for(int i = 0; i<5; i++)
         {
             analogRead(BATT_ADC);
-            delay(1);
+            //delay(1);
         }
 }
 void loop()
@@ -79,10 +86,10 @@ void loop()
     if(millis() > debug_count + DEBUG_INTERVAL)
     {
         debug_count = millis();
-        Serial.print("rx: ");
-        Serial.print(tx.rx_count);
-        Serial.print(" err count: ");
-        Serial.println(tx.err_count);
+        //Serial.print("rx: ");
+        //Serial.print(tx.rx_count);
+        //Serial.print(" err count: ");
+        //Serial.println(tx.err_count);
         analogReference(INTERNAL);
         clear_adc();
         tx.batt = analogRead(BATT_ADC);
@@ -93,26 +100,41 @@ void loop()
     if(millis() > touch_count + TOUCH_INTERVAL)
     {
         touch_count = millis();
-        touch_val = ADCTouch.read(TOUCH);   //no second parameter
-        touch_val -= ref;       //remove offset
-        if(touch_val > 30)
+        raw = ADCTouch.read(TOUCH);
+
+        total += raw;
+        if(samples > AVG_NUM)
+            total -= average;
+        else
+            samples ++;
+        average = total / samples;
+
+        //subtract average
+        touch_val = raw - average;
+
+        //limit it
+        if(touch_val < 0)
+            touch_val = 0;
+        if(touch_val > 255)
+            touch_val = 255;
+
+        tx.touch = touch_val;
+        if(touch_val > 10)
         {
             digitalWrite(LED_TOUCH, HIGH);
-            tx.flags |= FLAG_TOUCH;
+  //          tx.flags |= FLAG_TOUCH;
         }
         else
         {
             digitalWrite(LED_TOUCH, LOW);
-            tx.flags &= ~ FLAG_TOUCH;
+        //    tx.flags &= ~ FLAG_TOUCH;
         }
-        Serial.println(touch_val);
     }
-    
-    if(xbee_serial.available() == sizeof(rx))
+    if(Serial.available() == sizeof(rx))
     {
         digitalWrite(LED_PIN,HIGH);
         // do something with status?
-        int status = xbee_serial.readBytes(rx_buf, sizeof(rx));
+        int status = Serial.readBytes(rx_buf, sizeof(rx));
         tx.rx_count ++;
 
         //copy buffer to structure
@@ -121,27 +143,32 @@ void loop()
         if(rx.cksum != CRC8(rx_buf,sizeof(rx)-1))
         {
             //ignore broken packet
-            Serial.println("err: ck");
+            //Serial.println("err: ck");
             tx.err_count ++;
             return;
         }
-        //only write if amount is moveable
-        if(rx.amount < 180)
-            servo.write(rx.amount);
+        if(rx.amount != last_amount)
+        {
+            //Serial.print("new val: ");
+            //Serial.println(rx.amount);
+            last_amount = rx.amount;
+        }
+        //update the servo
+        servo.write(rx.amount);
 
         //send data back
         memcpy(&tx_buf, &tx, sizeof(tx));
         tx.cksum = CRC8(tx_buf,sizeof(tx)-1);
 
         memcpy(&tx_buf, &tx, sizeof(tx));
-        xbee_serial.write(tx_buf, sizeof(tx));
+        Serial.write(tx_buf, sizeof(tx));
 
         digitalWrite(LED_PIN,LOW);
     }
-    else if(xbee_serial.available() > sizeof(rx))
+    else if(Serial.available() > sizeof(rx))
     {
         tx.err_count ++;
-        xbee_serial.flush();
+        Serial.flush();
     }
 }
 
