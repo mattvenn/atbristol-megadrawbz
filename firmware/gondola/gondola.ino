@@ -77,7 +77,7 @@ void clear_adc()
         for(int i = 0; i<5; i++)
         {
             analogRead(BATT_ADC);
-            //delay(1);
+            delay(1);
         }
 }
 void loop()
