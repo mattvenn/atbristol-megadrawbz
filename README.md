@@ -3,6 +3,7 @@
 ## updates
 
 * [youtube playlist](https://www.youtube.com/playlist?list=PLmcDgdDpcaPiOdnMplbk7o1K5Kpvp_UAL)
+* [photos](https://goo.gl/photos/KGhmjEyrZScbemvW7)
 
 ## details
 
