@@ -2,11 +2,25 @@
 #include <Servo.h>
 #include <ADCTouch.h>
 
+#define LED_PEN 7
+#define LED_STATUS A5
+#define BEEP 6
+
+#define SERVO_ENABLE 8
+#define SERVO 9
+#define BUTTON 10
+
+#define BATT_SENSE A0
+#define BATT_DIVIDER A1
+#define TOUCH A2
+#define CHARGE 4
+
+#define AVG_NUM 100 //filter for the touch
+
 int raw = 0;
-long total = 0;
+unsigned long total = 0;
 int samples = 0;
 int average = 0;
-#define AVG_NUM 100
 uint8_t last_amount = 0;
 struct {
     uint8_t amount;
@@ -18,68 +32,62 @@ struct {
     uint16_t rx_count;
     uint16_t err_count;
     uint8_t touch;
-//    uint8_t flags;
+    uint8_t flags;
     uint8_t cksum;
 } tx;
 
 char rx_buf[sizeof(rx)];
 char tx_buf[sizeof(tx)];
-/*
+
 enum flags {
-  FLAG_TOUCH    = 0x01,
+  FLAG_CHARGE   = 0b00000001,
 };
-*/
 
-/*
-arduino is positioned:
-* top 5 pins mesh with 9,10,11,12,13
-* bottom 4 pins mesh with gnd gnd +5, 3.3v
-*/
-
-#define LED_PIN 13
-#define XBEE_RX 10
-#define XBEE_TX 11 
-#define SERVO 9
 #define SERVO_OFF 170
-#define BATT_ADC A1
 #define DEBUG_INTERVAL 10000
 #define TOUCH_INTERVAL 100
-#define LED_TOUCH A2
-#define TOUCH A5
 
-int ref;       //reference values to remove offset
 Servo servo;
 byte CRC8(char *data, byte len);
 unsigned long debug_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
 
-//SoftwareSerial xbee_serial(XBEE_RX,XBEE_TX); 
 void setup()
 {
   Serial.begin(57600);
 //  Serial.println("started");
-  pinMode(LED_PIN,OUTPUT);
-  pinMode(LED_TOUCH,OUTPUT);
-  digitalWrite(LED_PIN,HIGH);
-  digitalWrite(LED_TOUCH,HIGH);
-  //xbee_serial.begin(57600);
+  pinMode(LED_PEN,OUTPUT);
+  pinMode(LED_STATUS,OUTPUT);
+  digitalWrite(LED_PEN,LOW);
+  digitalWrite(LED_STATUS,LOW);
+  pinMode(CHARGE, INPUT);
+  digitalWrite(CHARGE, HIGH);
+
+    pinMode(SERVO_ENABLE, OUTPUT);
+    digitalWrite(SERVO_ENABLE, HIGH);
+
+
+    pinMode(BUTTON, INPUT);
+    digitalWrite(BUTTON, HIGH);
+
+    pinMode(BATT_DIVIDER, OUTPUT);
+    digitalWrite(BATT_DIVIDER, HIGH);
+
   servo.attach(SERVO);
   servo.write(SERVO_OFF);
+
+    tone(BEEP, 5000, 200);
+    delay(200);
+    tone(BEEP, 10000, 200);
+    delay(200);
+    tone(BEEP, 5000, 200);
+    delay(200);
   //Serial.print("sizeof(rx)=");
   //Serial.println(sizeof(rx));
   delay(1000);
-  ref = ADCTouch.read(TOUCH, 500);    //create reference values to
 }
 
-void clear_adc()
-{
-        for(int i = 0; i<5; i++)
-        {
-            analogRead(BATT_ADC);
-            delay(1);
-        }
-}
 void loop()
 {
     // periodically update battery and print stats
@@ -90,17 +98,20 @@ void loop()
         //Serial.print(tx.rx_count);
         //Serial.print(" err count: ");
         //Serial.println(tx.err_count);
-        analogReference(INTERNAL);
-        clear_adc();
-        tx.batt = analogRead(BATT_ADC);
-        analogReference(DEFAULT);
-        clear_adc();
+        tx.batt = analogRead(BATT_SENSE);
+
+        //charging flag
+        if(digitalRead(CHARGE) == LOW) // charging
+            tx.flags |= FLAG_CHARGE;
+        else
+            tx.flags &= ~ FLAG_CHARGE;
     }
+
 
     if(millis() > touch_count + TOUCH_INTERVAL)
     {
         touch_count = millis();
-        raw = ADCTouch.read(TOUCH);
+        raw = ADCTouch.read(TOUCH, 1); //only get one sample
 
         total += raw;
         if(samples > AVG_NUM)
@@ -120,19 +131,13 @@ void loop()
 
         tx.touch = touch_val;
         if(touch_val > 10)
-        {
-            digitalWrite(LED_TOUCH, HIGH);
-  //          tx.flags |= FLAG_TOUCH;
-        }
-        else
-        {
-            digitalWrite(LED_TOUCH, LOW);
-        //    tx.flags &= ~ FLAG_TOUCH;
-        }
+            tone(BEEP, 2000, 50);
+
     }
-    if(Serial.available() == sizeof(rx))
+
+    if(Serial.available() >= sizeof(rx))
     {
-        digitalWrite(LED_PIN,HIGH);
+        digitalWrite(LED_STATUS,HIGH);
         // do something with status?
         int status = Serial.readBytes(rx_buf, sizeof(rx));
         tx.rx_count ++;
@@ -145,6 +150,8 @@ void loop()
             //ignore broken packet
             //Serial.println("err: ck");
             tx.err_count ++;
+            digitalWrite(LED_STATUS,LOW);
+            Serial.flush();
             return;
         }
         if(rx.amount != last_amount)
@@ -163,12 +170,7 @@ void loop()
         memcpy(&tx_buf, &tx, sizeof(tx));
         Serial.write(tx_buf, sizeof(tx));
 
-        digitalWrite(LED_PIN,LOW);
-    }
-    else if(Serial.available() > sizeof(rx))
-    {
-        tx.err_count ++;
-        Serial.flush();
+        digitalWrite(LED_STATUS,LOW);
     }
 }
 
