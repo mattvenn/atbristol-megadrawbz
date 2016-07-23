@@ -15,7 +15,11 @@
 #define TOUCH A2
 #define CHARGE 4
 
-#define AVG_NUM 100 //filter for the touch
+#define SERVO_OFF 170 //startup servo position
+#define MON_INTERVAL 1000 //delay between reading ADC
+
+#define TOUCH_INTERVAL 100 //delay between checking touch
+#define AVG_NUM 10000 //filter for the touch,
 
 int raw = 0;
 unsigned long total = 0;
@@ -43,13 +47,10 @@ enum flags {
   FLAG_CHARGE   = 0b00000001,
 };
 
-#define SERVO_OFF 170
-#define DEBUG_INTERVAL 10000
-#define TOUCH_INTERVAL 100
 
 Servo servo;
 byte CRC8(char *data, byte len);
-unsigned long debug_count = 0;
+unsigned long mon_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
 
@@ -91,13 +92,9 @@ void setup()
 void loop()
 {
     // periodically update battery and print stats
-    if(millis() > debug_count + DEBUG_INTERVAL)
+    if(millis() > mon_count + MON_INTERVAL)
     {
-        debug_count = millis();
-        //Serial.print("rx: ");
-        //Serial.print(tx.rx_count);
-        //Serial.print(" err count: ");
-        //Serial.println(tx.err_count);
+        mon_count = millis();
         tx.batt = analogRead(BATT_SENSE);
 
         //charging flag
