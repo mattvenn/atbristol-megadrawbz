@@ -1,3 +1,6 @@
 [submodule "machinekit-bipod"]
 	path = machinekit-bipod
 	url = git@github.com:mattvenn/machinekit-bipod
+[submodule "sunny-webbox"]
+	path = sunny-webbox
+	url = git@github.com:mattvenn/sunny-webbox
