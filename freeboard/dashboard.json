@@ -1,0 +1,362 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "LinuxCNC",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "cnc feed",
+						"value": "var ts = new Date(datasources[\"bbb\"][\"0\"][\"timestamp\"]).getTime();\nvar ms = new Date().getTime();\nvar d = ms - ts;\n\nif (d > 5 * 60 * 1000) {\n    return 0;\n} else {\n    return 1;\n}",
+						"on_text": "live",
+						"off_text": "stopped"
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "interp state",
+						"value": "datasources[\"bbb\"][0][\"cnc_interpstate\"] != 1",
+						"on_text": "running",
+						"off_text": "waiting"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "xpos",
+						"size": "regular",
+						"value": "z = datasources[\"bbb\"][0][\"xpos\"];\nz = parseFloat(z);\nreturn z.toFixed(2);",
+						"animate": true,
+						"units": "mm"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "ypos",
+						"size": "regular",
+						"value": "z = datasources[\"bbb\"][0][\"ypos\"];\nz = parseFloat(z);\nreturn z.toFixed(2);",
+						"animate": true,
+						"units": "mm"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "zpos",
+						"size": "regular",
+						"value": "z = datasources[\"bbb\"][0][\"zpos\"];\nz = parseFloat(z);\nreturn z.toFixed(2);",
+						"animate": true,
+						"units": "mm"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "exec state",
+						"size": "regular",
+						"value": "datasources[\"historic\"][\"cnc_execstate\"]",
+						"sparkline": true,
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "interpreter state",
+						"size": "regular",
+						"value": "datasources[\"historic\"][\"cnc_interpstate\"]",
+						"sparkline": true,
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "cnc state",
+						"size": "regular",
+						"value": "datasources[\"historic\"][\"cnc_state\"]",
+						"sparkline": true,
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "state",
+						"size": "regular",
+						"value": "datasources[\"historic\"][\"cnc_state\"]",
+						"sparkline": true,
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "energy feed",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "energy feed",
+						"value": "var ts = new Date(datasources[\"atbristol energy\"][\"0\"][\"timestamp\"]).getTime();\nvar ms = new Date().getTime();\nvar d = ms - ts;\n\nif (d > 5 * 60 * 1000) {\n    return 0;\n} else {\n    return 1;\n}",
+						"on_text": "live",
+						"off_text": "stopped"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "power",
+						"value": "datasources[\"atbristol energy\"][0][\"now_w\"]",
+						"units": "W",
+						"min_value": 0,
+						"max_value": "80000"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "today's energy",
+						"size": "regular",
+						"value": "datasources[\"atbristol energy\"][0][\"total_today_kw\"]",
+						"animate": true,
+						"units": "kWh"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "energy",
+						"value": [
+							"datasources[\"at bristol energy historic\"][\"now_w\"]"
+						]
+					}
+				},
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://cursivedata.co.uk/data/working/pipeline_17_complete.svg",
+						"refresh": 600
+					}
+				}
+			]
+		},
+		{
+			"title": "Gondola",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "battery status",
+						"value": "datasources[\"bbb\"][0][\"pen_batt\"] > 3.6",
+						"on_text": "ok",
+						"off_text": "change battery"
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "charging",
+						"value": "parseInt(datasources[\"bbb\"][0][\"pen_flags\"]) & 0b00000001"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "battery",
+						"value": "datasources[\"bbb\"][\"0\"][\"pen_batt\"]",
+						"units": "V",
+						"min_value": 0,
+						"max_value": "5.0"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "gondola battery",
+						"value": [
+							"datasources[\"historic\"][\"pen_batt\"]"
+						]
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "gondola rx count",
+						"value": [
+							"datasources[\"historic\"][\"pen_rxcount\"]"
+						],
+						"legend": ""
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "gondola err count",
+						"value": [
+							"datasources[\"historic\"][\"pen_errcount\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "Linux",
+			"width": 1,
+			"row": {
+				"3": 17,
+				"4": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "linux feed",
+						"value": "// Example: Convert temp from C to F and truncate to 2 decimal places.\n// return (datasources[\"MyDatasource\"].sensor.tempInF * 1.8 + 32).toFixed(2);\nvar ts = new Date(datasources[\"linux\"][\"0\"][\"timestamp\"]).getTime();\nvar ms = new Date().getTime();\nvar d = ms - ts;\n\nif (d > 5 * 60 * 1000) {\n    return 0;\n} else {\n    return 1;\n}",
+						"on_text": "running",
+						"off_text": "stopped"
+					}
+				},
+				{
+					"type": "indicator",
+					"settings": {
+						"title": "autossh",
+						"value": "if (datasources[\"linux\"][0][\"autossh_pid\"] == 'True'){return 1;}\nreturn 0;",
+						"on_text": "running",
+						"off_text": "stopped"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "uptime",
+						"size": "big",
+						"value": "secs = parseInt(datasources[\"linux\"][\"0\"][\"uptime\"]);\nhours = secs / 3600;\nreturn Math.round(hours);",
+						"animate": true,
+						"units": "hours"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "load avg",
+						"value": "datasources[\"linux\"][0][\"load_avg\"]",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "pcb temp",
+						"value": "datasources[\"linux\"][0][\"pcb_temp\"]",
+						"units": "C",
+						"min_value": 0,
+						"max_value": "40"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "cpu temp",
+						"value": "datasources[\"linux\"][0][\"cpu_temp\"] / 1000",
+						"units": "C",
+						"min_value": 0,
+						"max_value": "100"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "bbb",
+			"type": "JSON",
+			"settings": {
+				"url": "http://phant.cursivedata.co.uk/output/L4y9DEbMzEUOdzPYlQ9NSJAXom4.json?limit=1",
+				"use_thingproxy": false,
+				"refresh": 30,
+				"method": "GET",
+				"name": "bbb"
+			}
+		},
+		{
+			"name": "historic",
+			"type": "playback",
+			"settings": {
+				"datafile": " http://phant.cursivedata.co.uk/output/L4y9DEbMzEUOdzPYlQ9NSJAXom4.json?limit=144&sample=2",
+				"refresh": 0.01,
+				"name": "historic"
+			}
+		},
+		{
+			"name": "atbristol energy",
+			"type": "JSON",
+			"settings": {
+				"url": "http://phant.cursivedata.co.uk/output/w2zweAE648Uk1QAVyNJBHZjpLrL.json?limit=1",
+				"use_thingproxy": false,
+				"refresh": 60,
+				"method": "GET"
+			}
+		},
+		{
+			"name": "at bristol energy historic",
+			"type": "playback",
+			"settings": {
+				"datafile": "http://phant.cursivedata.co.uk/output/w2zweAE648Uk1QAVyNJBHZjpLrL.json?limit=100&sample=2",
+				"refresh": 0.01
+			}
+		},
+		{
+			"name": "linux",
+			"type": "JSON",
+			"settings": {
+				"url": "http://phant.cursivedata.co.uk/output/3Nx3P463ZJhKwXqzNJKbCJqg13r.json?limit=1",
+				"use_thingproxy": false,
+				"refresh": 30,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 4
+}
