@@ -39,6 +39,7 @@ except KeyboardInterrupt:
     log.info("interrupted!")
 except Exception as e:
     log.error("exited with exception: %s" % e)
+    log.error("exited with exception: %s" % type(e))
 
 driver.cleanup()
 log.info("ending")
