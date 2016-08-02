@@ -16,7 +16,7 @@ class PWM():
             duty = 0
         if duty > 100:
             duty = 100
-        duty = 100 - duty
+#        duty = 100 - duty
         duty *= 100
         os.system("echo %d > %s/duty_ns" % (duty, self.path))
 
