@@ -99,9 +99,17 @@ void loop()
 
         //charging flag
         if(digitalRead(CHARGE) == LOW) // charging
+        {
+            digitalWrite(LED_PEN, LOW);
+            digitalWrite(SERVO_ENABLE, LOW);
             tx.flags |= FLAG_CHARGE;
+        }
         else
+        {
             tx.flags &= ~ FLAG_CHARGE;
+            digitalWrite(LED_PEN, HIGH);
+            digitalWrite(SERVO_ENABLE, HIGH);
+        }
     }
 
 
@@ -127,8 +135,10 @@ void loop()
             touch_val = 255;
 
         tx.touch = touch_val;
+        /*
         if(touch_val > 10)
             tone(BEEP, 2000, 50);
+            */
 
     }
 
