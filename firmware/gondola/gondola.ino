@@ -18,7 +18,6 @@
 #define SERVO_OFF 170 //startup servo position
 #define MON_INTERVAL 1000 //delay between reading ADC
 
-#define TOUCH_INTERVAL 100 //delay between checking touch
 #define AVG_NUM 10000 //filter for the touch,
 
 int raw = 0;
@@ -28,6 +27,7 @@ int average = 0;
 uint8_t last_amount = 0;
 struct {
     uint8_t amount;
+    uint8_t flags;
     uint8_t cksum;
 } rx;
 
@@ -44,7 +44,8 @@ char rx_buf[sizeof(rx)];
 char tx_buf[sizeof(tx)];
 
 enum flags {
-  FLAG_CHARGE   = 0b00000001,
+  FLAG_CHARGE        = 0b00000001,
+  FLAG_SERVO_ENABLE  = 0b00000010,
 };
 
 
@@ -53,6 +54,7 @@ byte CRC8(char *data, byte len);
 unsigned long mon_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
+bool servo_enable = true;
 
 void setup()
 {
@@ -67,7 +69,6 @@ void setup()
 
     pinMode(SERVO_ENABLE, OUTPUT);
     digitalWrite(SERVO_ENABLE, HIGH);
-
 
     pinMode(BUTTON, INPUT);
     digitalWrite(BUTTON, HIGH);
@@ -101,52 +102,24 @@ void loop()
         if(digitalRead(CHARGE) == LOW) // charging
         {
             digitalWrite(LED_PEN, LOW);
-            digitalWrite(SERVO_ENABLE, LOW);
             tx.flags |= FLAG_CHARGE;
         }
         else
         {
             tx.flags &= ~ FLAG_CHARGE;
             digitalWrite(LED_PEN, HIGH);
-            digitalWrite(SERVO_ENABLE, HIGH);
         }
-    }
 
-
-    if(millis() > touch_count + TOUCH_INTERVAL)
-    {
-        touch_count = millis();
-        raw = ADCTouch.read(TOUCH, 1); //only get one sample
-
-        total += raw;
-        if(samples > AVG_NUM)
-            total -= average;
+        if(servo_enable)
+            tx.flags |= FLAG_SERVO_ENABLE;
         else
-            samples ++;
-        average = total / samples;
-
-        //subtract average
-        touch_val = raw - average;
-
-        //limit it
-        if(touch_val < 0)
-            touch_val = 0;
-        if(touch_val > 255)
-            touch_val = 255;
-
-        tx.touch = touch_val;
-        /*
-        if(touch_val > 10)
-            tone(BEEP, 2000, 50);
-            */
-
+            tx.flags &= ~ FLAG_SERVO_ENABLE;
     }
 
     if(Serial.available() >= sizeof(rx))
     {
         digitalWrite(LED_STATUS,HIGH);
-        // do something with status?
-        int status = Serial.readBytes(rx_buf, sizeof(rx));
+        Serial.readBytes(rx_buf, sizeof(rx));
         tx.rx_count ++;
 
         //copy buffer to structure
@@ -161,12 +134,19 @@ void loop()
             Serial.flush();
             return;
         }
-        if(rx.amount != last_amount)
+
+        //turn on or off servo
+        if(rx.flags & FLAG_SERVO_ENABLE)
         {
-            //Serial.print("new val: ");
-            //Serial.println(rx.amount);
-            last_amount = rx.amount;
+            servo_enable = true;
+            digitalWrite(SERVO_ENABLE, HIGH);
         }
+        else
+        {
+            servo_enable = false;
+            digitalWrite(SERVO_ENABLE, LOW);
+        }
+
         //update the servo
         servo.write(rx.amount);
 
