@@ -1,6 +1,5 @@
 //#include <SoftwareSerial.h>
 #include <Servo.h>
-#include <ADCTouch.h>
 
 #define LED_PEN 7
 #define LED_STATUS A5
