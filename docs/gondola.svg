@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="909"
+   height="2079"
+   sodipodi:docname="gondola.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="1176"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="0.34102934"
+     inkscape:cx="454.5"
+     inkscape:cy="1039.5"
+     inkscape:window-x="1440"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <image
+     width="909"
+     height="2079"
+     xlink:href="file:///home/mattvenn/work/atbristol-megadrawbz/docs/gondola.jpg"
+     id="image10"
+     x="0"
+     y="0"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34" />
+  <image
+     y="312.50146"
+     x="1007.1383"
+     id="image3135"
+     xlink:href="file:///home/mattvenn/work/atbristol-megadrawbz/docs/ftdi.png"
+     height="1096.2567"
+     width="494.51898"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34" />
+  <image
+     y="1502.6346"
+     x="1000.6023"
+     id="image3197"
+     xlink:href="file:///home/mattvenn/work/atbristol-megadrawbz/docs/battery.png"
+     height="578"
+     width="632"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34" />
+  <image
+     y="1494.4731"
+     x="-459.22989"
+     id="image3259"
+     xlink:href="file:///home/mattvenn/work/atbristol-megadrawbz/docs/servo.png"
+     height="565"
+     width="332"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34" />
+  <image
+     y="545.61145"
+     x="-604.01355"
+     id="image3321"
+     xlink:href="file:///home/mattvenn/work/atbristol-megadrawbz/docs/icsp.png"
+     height="691.61493"
+     width="464.46069"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34" />
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="1559.983"
+     y="551.27222"
+     id="text3324"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34"><tspan
+       sodipodi:role="line"
+       id="tspan3326"
+       x="1559.983"
+       y="551.27222">gnd</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-630.44427"
+     y="1900.1298"
+     id="text3328"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34"><tspan
+       sodipodi:role="line"
+       id="tspan3330"
+       x="-630.44427"
+       y="1900.1298">gnd</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-328.41751"
+     y="1310.7375"
+     id="text3332"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34"><tspan
+       sodipodi:role="line"
+       id="tspan3334"
+       x="-328.41751"
+       y="1310.7375">gnd</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="1691.9365"
+     y="1759.3794"
+     id="text3336"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="/home/mattvenn/work/atbristol-megadrawbz/docs/image10.png"
+     inkscape:export-xdpi="101.34"
+     inkscape:export-ydpi="101.34"><tspan
+       sodipodi:role="line"
+       id="tspan3338"
+       x="1691.9365"
+       y="1759.3794">gnd</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="1008.7109"
+     y="269.77151"
+     id="text2994"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan2996"
+       x="1008.7109"
+       y="269.77151">serial programming header</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="1020.44"
+     y="2164.0366"
+     id="text2998"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3000"
+       x="1020.44"
+       y="2164.0366">power header</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-606.9859"
+     y="483.82932"
+     id="text3002"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3004"
+       x="-606.9859"
+       y="483.82932">icsp header</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="-489.69394"
+     y="2140.5781"
+     id="text3006"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3008"
+       x="-489.69394"
+       y="2140.5781">servo header</tspan></text>
+</svg>
