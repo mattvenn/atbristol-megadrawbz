@@ -98,6 +98,14 @@ void loop()
         tx.batt = analogRead(BATT_SENSE);
 
         //charging flag
+        /*
+        Shutdown Hi-Z 
+        No Battery Present Hi-Z 
+        Preconditioning L 
+        Constant-Current Fast Charge L
+        Constant Voltage L
+        Charge Complete – Standby H
+        */
         if(digitalRead(CHARGE) == LOW) // charging
         {
             digitalWrite(LED_PEN, LOW);
