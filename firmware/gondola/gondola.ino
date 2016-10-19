@@ -4,6 +4,7 @@
 #define LED_PEN 7
 #define LED_STATUS A5
 #define BEEP 6
+#define XBEE_SLEEP 5
 
 #define SERVO_ENABLE 8
 #define SERVO 9
@@ -14,7 +15,8 @@
 #define TOUCH A2
 #define CHARGE 4
 
-#define SERVO_OFF 170 //startup servo position
+#define SERVO_MAX 160 //startup servo position hitec hs-81
+#define SERVO_MIN 20
 #define MON_INTERVAL 1000 //delay between reading ADC
 
 #define AVG_NUM 10000 //filter for the touch,
@@ -50,52 +52,76 @@ enum flags {
 
 Servo servo;
 byte CRC8(char *data, byte len);
+uint16_t read_batt_mv();
+
 unsigned long mon_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
-bool servo_enable = true;
+bool servo_enable = false;
 
 void setup()
 {
+  /* power saving first */
+  pinMode(XBEE_SLEEP, OUTPUT);
+  digitalWrite(XBEE_SLEEP, HIGH);
+
+  pinMode(SERVO_ENABLE, OUTPUT);
+  digitalWrite(SERVO_ENABLE, LOW);
+
+  pinMode(BATT_DIVIDER, OUTPUT);
+  digitalWrite(BATT_DIVIDER, LOW);
+
   Serial.begin(57600);
-//  Serial.println("started");
+
   pinMode(LED_PEN,OUTPUT);
   pinMode(LED_STATUS,OUTPUT);
+
   digitalWrite(LED_PEN,LOW);
   digitalWrite(LED_STATUS,LOW);
+
   pinMode(CHARGE, INPUT);
   digitalWrite(CHARGE, HIGH);
 
-    pinMode(SERVO_ENABLE, OUTPUT);
-    digitalWrite(SERVO_ENABLE, HIGH);
-
-    pinMode(BUTTON, INPUT);
-    digitalWrite(BUTTON, HIGH);
-
-    pinMode(BATT_DIVIDER, OUTPUT);
-    digitalWrite(BATT_DIVIDER, HIGH);
+  pinMode(BUTTON, INPUT);
+  digitalWrite(BUTTON, HIGH);
 
   servo.attach(SERVO);
-  servo.write(SERVO_OFF);
 
-    tone(BEEP, 5000, 200);
-    delay(200);
-    tone(BEEP, 10000, 200);
-    delay(200);
-    tone(BEEP, 5000, 200);
-    delay(200);
+  // check enough batt to enable radio
+  tone(BEEP, 5000, 200);
+  delay(200);
+
+  while(true)
+  {
+      if( read_batt_mv() > 3500 )
+        break;
+      delay(500);
+  }
+
+  tone(BEEP, 3000, 200);
+  digitalWrite(XBEE_SLEEP, LOW);
   //Serial.print("sizeof(rx)=");
   //Serial.println(sizeof(rx));
-  delay(1000);
 }
 
+uint16_t read_batt_mv()
+{
+    /* 
+    R1 = 10k, R2 = 4.7k
+    mv per ADC count = 3300 / 1024
+    */
+    digitalWrite(BATT_DIVIDER, HIGH);
+    delay(2);
+    return 4.737 * analogRead(BATT_SENSE);
+    digitalWrite(BATT_DIVIDER, LOW);
+}
 void loop()
 {
     // periodically update battery and print stats
     if(millis() > mon_count + MON_INTERVAL)
     {
         mon_count = millis();
-        tx.batt = analogRead(BATT_SENSE);
+        tx.batt = read_batt_mv();
 
         //charging flag
         /*
@@ -155,7 +181,8 @@ void loop()
         }
 
         //update the servo
-        servo.write(rx.amount);
+        if(rx.amount <= SERVO_MAX && rx.amount >= SERVO_MIN)
+            servo.write(rx.amount);
 
         //send data back
         memcpy(&tx_buf, &tx, sizeof(tx));
