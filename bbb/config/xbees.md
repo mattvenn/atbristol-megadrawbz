@@ -19,3 +19,17 @@ MY 11           #xbee id
 SL 4064C3C5     #serial low 8 bytes, SH is default
 DH 0013A200     #default of SH
 DL 403B8A29     #gondola SL
+
+## @bristol bbb
+
+???
+
+## @bristol gondola
+
+BD 6
+ID 2001
+MY 0
+SL 403B6AD0
+DH 0013A200     #default of SH
+DL 4070822C
+
