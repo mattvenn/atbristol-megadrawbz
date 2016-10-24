@@ -1,10 +1,10 @@
 //#include <SoftwareSerial.h>
 #include <Servo.h>
-#include <ADCTouch.h>
 
 #define LED_PEN 7
 #define LED_STATUS A5
 #define BEEP 6
+#define XBEE_SLEEP 5
 
 #define SERVO_ENABLE 8
 #define SERVO 9
@@ -15,10 +15,10 @@
 #define TOUCH A2
 #define CHARGE 4
 
-#define SERVO_OFF 170 //startup servo position
+#define SERVO_MAX 160 //startup servo position hitec hs-81
+#define SERVO_MIN 20
 #define MON_INTERVAL 1000 //delay between reading ADC
 
-#define TOUCH_INTERVAL 100 //delay between checking touch
 #define AVG_NUM 10000 //filter for the touch,
 
 int raw = 0;
@@ -28,6 +28,7 @@ int average = 0;
 uint8_t last_amount = 0;
 struct {
     uint8_t amount;
+    uint8_t flags;
     uint8_t cksum;
 } rx;
 
@@ -44,109 +45,105 @@ char rx_buf[sizeof(rx)];
 char tx_buf[sizeof(tx)];
 
 enum flags {
-  FLAG_CHARGE   = 0b00000001,
+  FLAG_CHARGE        = 0b00000001,
+  FLAG_SERVO_ENABLE  = 0b00000010,
 };
 
 
 Servo servo;
 byte CRC8(char *data, byte len);
+uint16_t read_batt_mv();
+
 unsigned long mon_count = 0;
 unsigned long touch_count = 0;
 int touch_val = 0;
+bool servo_enable = false;
 
 void setup()
 {
+  /* power saving first */
+  pinMode(XBEE_SLEEP, OUTPUT);
+  digitalWrite(XBEE_SLEEP, HIGH);
+
+  pinMode(SERVO_ENABLE, OUTPUT);
+  digitalWrite(SERVO_ENABLE, LOW);
+
+  pinMode(BATT_DIVIDER, OUTPUT);
+  digitalWrite(BATT_DIVIDER, LOW);
+
   Serial.begin(57600);
-//  Serial.println("started");
+
   pinMode(LED_PEN,OUTPUT);
   pinMode(LED_STATUS,OUTPUT);
+
   digitalWrite(LED_PEN,LOW);
   digitalWrite(LED_STATUS,LOW);
+
   pinMode(CHARGE, INPUT);
   digitalWrite(CHARGE, HIGH);
 
-    pinMode(SERVO_ENABLE, OUTPUT);
-    digitalWrite(SERVO_ENABLE, HIGH);
-
-
-    pinMode(BUTTON, INPUT);
-    digitalWrite(BUTTON, HIGH);
-
-    pinMode(BATT_DIVIDER, OUTPUT);
-    digitalWrite(BATT_DIVIDER, HIGH);
+  pinMode(BUTTON, INPUT);
+  digitalWrite(BUTTON, HIGH);
 
   servo.attach(SERVO);
-  servo.write(SERVO_OFF);
 
-    tone(BEEP, 5000, 200);
-    delay(200);
-    tone(BEEP, 10000, 200);
-    delay(200);
-    tone(BEEP, 5000, 200);
-    delay(200);
-  //Serial.print("sizeof(rx)=");
-  //Serial.println(sizeof(rx));
-  delay(1000);
+  tone(BEEP, 5000, 200);
+  delay(200);
+
+  tone(BEEP, 3000, 200);
+  //turn on xbee
+  digitalWrite(XBEE_SLEEP, LOW);
 }
 
+uint16_t read_batt_mv()
+{
+    /* 
+    R1 = 10k, R2 = 4.7k
+    mv per ADC count = 3300 / 1024
+    */
+    digitalWrite(BATT_DIVIDER, HIGH);
+    delay(2);
+    return 4.737 * analogRead(BATT_SENSE);
+    digitalWrite(BATT_DIVIDER, LOW);
+}
 void loop()
 {
     // periodically update battery and print stats
     if(millis() > mon_count + MON_INTERVAL)
     {
         mon_count = millis();
-        tx.batt = analogRead(BATT_SENSE);
+        tx.batt = read_batt_mv();
 
         //charging flag
+        /*
+        Shutdown Hi-Z 
+        No Battery Present Hi-Z 
+        Preconditioning L 
+        Constant-Current Fast Charge L
+        Constant Voltage L
+        Charge Complete – Standby H
+        */
         if(digitalRead(CHARGE) == LOW) // charging
         {
             digitalWrite(LED_PEN, LOW);
-            digitalWrite(SERVO_ENABLE, LOW);
             tx.flags |= FLAG_CHARGE;
         }
         else
         {
             tx.flags &= ~ FLAG_CHARGE;
             digitalWrite(LED_PEN, HIGH);
-            digitalWrite(SERVO_ENABLE, HIGH);
         }
-    }
 
-
-    if(millis() > touch_count + TOUCH_INTERVAL)
-    {
-        touch_count = millis();
-        raw = ADCTouch.read(TOUCH, 1); //only get one sample
-
-        total += raw;
-        if(samples > AVG_NUM)
-            total -= average;
+        if(servo_enable)
+            tx.flags |= FLAG_SERVO_ENABLE;
         else
-            samples ++;
-        average = total / samples;
-
-        //subtract average
-        touch_val = raw - average;
-
-        //limit it
-        if(touch_val < 0)
-            touch_val = 0;
-        if(touch_val > 255)
-            touch_val = 255;
-
-        tx.touch = touch_val;
-        /*
-        if(touch_val > 10)
-            tone(BEEP, 2000, 50);
-            */
-
+            tx.flags &= ~ FLAG_SERVO_ENABLE;
     }
 
     if(Serial.available() >= sizeof(rx))
     {
         digitalWrite(LED_STATUS,HIGH);
-        // do something with status?
-        int status = Serial.readBytes(rx_buf, sizeof(rx));
+        Serial.readBytes(rx_buf, sizeof(rx));
         tx.rx_count ++;
 
         //copy buffer to structure
@@ -161,14 +158,22 @@ void loop()
             Serial.flush();
             return;
         }
-        if(rx.amount != last_amount)
+
+        //turn on or off servo
+        if(rx.flags & FLAG_SERVO_ENABLE)
         {
-            //Serial.print("new val: ");
-            //Serial.println(rx.amount);
-            last_amount = rx.amount;
+            servo_enable = true;
+            digitalWrite(SERVO_ENABLE, HIGH);
         }
+        else
+        {
+            servo_enable = false;
+            digitalWrite(SERVO_ENABLE, LOW);
+        }
+
         //update the servo
-        servo.write(rx.amount);
+        if(rx.amount <= SERVO_MAX && rx.amount >= SERVO_MIN)
+            servo.write(rx.amount);
 
         //send data back
         memcpy(&tx_buf, &tx, sizeof(tx));
