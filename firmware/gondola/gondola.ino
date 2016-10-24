@@ -87,21 +87,12 @@ void setup()
 
   servo.attach(SERVO);
 
-  // check enough batt to enable radio
   tone(BEEP, 5000, 200);
   delay(200);
 
-  while(true)
-  {
-      if( read_batt_mv() > 3500 )
-        break;
-      delay(500);
-  }
-
   tone(BEEP, 3000, 200);
+  //turn on xbee
   digitalWrite(XBEE_SLEEP, LOW);
-  //Serial.print("sizeof(rx)=");
-  //Serial.println(sizeof(rx));
 }
 
 uint16_t read_batt_mv()
