@@ -154,27 +154,26 @@ void loop()
             //ignore broken packet
             //Serial.println("err: ck");
             tx.err_count ++;
-            digitalWrite(LED_STATUS,LOW);
             Serial.flush();
-            return;
-        }
-
-        //turn on or off servo
-        if(rx.flags & FLAG_SERVO_ENABLE)
-        {
-            servo_enable = true;
-            digitalWrite(SERVO_ENABLE, HIGH);
         }
         else
         {
-            servo_enable = false;
-            digitalWrite(SERVO_ENABLE, LOW);
+            //turn on or off servo
+            if(rx.flags & FLAG_SERVO_ENABLE)
+            {
+                servo_enable = true;
+                digitalWrite(SERVO_ENABLE, HIGH);
+            }
+            else
+            {
+                servo_enable = false;
+                digitalWrite(SERVO_ENABLE, LOW);
+            }
+
+            //update the servo
+            if(rx.amount <= SERVO_MAX && rx.amount >= SERVO_MIN)
+                servo.write(rx.amount);
         }
-
-        //update the servo
-        if(rx.amount <= SERVO_MAX && rx.amount >= SERVO_MIN)
-            servo.write(rx.amount);
-
         //send data back
         memcpy(&tx_buf, &tx, sizeof(tx));
         tx.cksum = CRC8(tx_buf,sizeof(tx)-1);
