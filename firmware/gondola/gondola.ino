@@ -27,12 +27,14 @@ int samples = 0;
 int average = 0;
 uint8_t last_amount = 0;
 struct {
+    uint8_t start;
     uint8_t amount;
     uint8_t flags;
     uint8_t cksum;
 } rx;
 
 struct {
+    uint8_t start = 0xAA;
     uint16_t batt;
     uint16_t rx_count;
     uint16_t err_count;
@@ -142,6 +144,16 @@ void loop()
 
     if(Serial.available() >= sizeof(rx))
     {
+        uint8_t start = Serial.peek();
+
+        if(start != 0xAA)
+        {
+            // chuck the 1st byte
+            Serial.read();
+            tx.err_count ++;
+            return;
+        }
+        
         digitalWrite(LED_STATUS,HIGH);
         Serial.readBytes(rx_buf, sizeof(rx));
         tx.rx_count ++;
@@ -154,7 +166,6 @@ void loop()
             //ignore broken packet
             //Serial.println("err: ck");
             tx.err_count ++;
-            Serial.flush();
         }
         else
         {
