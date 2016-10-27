@@ -49,7 +49,7 @@ L MCP73831T U1
 U 1 1 580603AE
 P 6100 3700
 F 0 "U1" H 6000 4000 60  0000 C CNN
-F 1 "MCP73831T" H 6050 3250 60  0000 C CNN
+F 1 "MCP73832" H 6050 3250 60  0000 C CNN
 F 2 "Housings_SOT-23_SOT-143_TSOT-6:SOT-23-5" H 6100 3700 60  0001 C CNN
 F 3 "" H 6100 3700 60  0000 C CNN
 	1    6100 3700
@@ -141,7 +141,7 @@ F 1 "board conn" V 6850 2150 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 6750 2150 60  0001 C CNN
 F 3 "" H 6750 2150 60  0000 C CNN
 	1    6750 2150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L CONN_01X02 charge1
@@ -267,11 +267,11 @@ $EndComp
 Text GLabel 6250 2050 0    60   Input ~ 0
 powerout
 $Comp
-L R 10k2
+L R r1
 U 1 1 58063DAD
 P 8900 3100
-F 0 "10k2" V 8980 3100 50  0000 C CNN
-F 1 "R" V 8900 3100 50  0000 C CNN
+F 0 "r1" V 8980 3100 50  0000 C CNN
+F 1 "100k" V 8900 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" V 8830 3100 30  0001 C CNN
 F 3 "" H 8900 3100 30  0000 C CNN
 	1    8900 3100
@@ -281,6 +281,83 @@ Text GLabel 9550 3550 2    60   Input ~ 0
 powerout
 Text GLabel 7950 3300 0    60   Input ~ 0
 batt
+$Comp
+L CONN_01X02 batt1
+U 1 1 58064A0F
+P 7950 2250
+F 0 "batt1" H 7950 2400 50  0000 C CNN
+F 1 "CONN_01X02" V 8050 2250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7950 2250 60  0001 C CNN
+F 3 "" H 7950 2250 60  0000 C CNN
+	1    7950 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 2200 0    60   Input ~ 0
+batt
+$Comp
+L GND #PWR013
+U 1 1 58064ADD
+P 7600 2300
+F 0 "#PWR013" H 7600 2050 50  0001 C CNN
+F 1 "GND" H 7600 2150 50  0000 C CNN
+F 2 "" H 7600 2300 60  0000 C CNN
+F 3 "" H 7600 2300 60  0000 C CNN
+	1    7600 2300
+	1    0    0    -1  
+$EndComp
+Text GLabel 6450 5250 2    60   Input ~ 0
+charge_safe
+Text GLabel 6200 2250 0    60   Input ~ 0
+charge_safe
+$Comp
+L D_Schottky D2
+U 1 1 580DCE39
+P 9400 3400
+F 0 "D2" H 9400 3500 50  0000 C CNN
+F 1 "D_Schottky" H 9400 3300 50  0000 C CNN
+F 2 "Diodes_SMD:SMA_Standard" H 9400 3400 50  0001 C CNN
+F 3 "" H 9400 3400 50  0000 C CNN
+	1    9400 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR014
+U 1 1 580DD019
+P 9400 2900
+F 0 "#PWR014" H 9400 2750 50  0001 C CNN
+F 1 "+5V" H 9400 3040 50  0000 C CNN
+F 2 "" H 9400 2900 60  0000 C CNN
+F 3 "" H 9400 2900 60  0000 C CNN
+	1    9400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 580DD2ED
+P 8650 3100
+F 0 "#PWR015" H 8650 2850 50  0001 C CNN
+F 1 "GND" H 8650 2950 50  0000 C CNN
+F 2 "" H 8650 3100 60  0000 C CNN
+F 3 "" H 8650 3100 60  0000 C CNN
+	1    8650 3100
+	0    1    1    0   
+$EndComp
+Text Notes 7350 6800 0    60   ~ 0
+http://ww1.microchip.com/downloads/en/AppNotes/01149c.pdf\nhttp://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/
+$Comp
+L Q_PMOS_GSD Q1
+U 1 1 580DD92E
+P 9050 3450
+F 0 "Q1" H 9350 3500 50  0000 R CNN
+F 1 "Q_PMOS_GSD" H 9700 3400 50  0000 R CNN
+F 2 "Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering" H 9250 3550 50  0001 C CNN
+F 3 "" H 9050 3450 50  0000 C CNN
+F 4 "2061419" H 9050 3450 60  0001 C CNN "farnell #"
+	1    9050 3450
+	0    -1   1    0   
+$EndComp
+Text Notes 1800 2800 0    60   ~ 0
+								73831	73832\nShutdown						Hi-Z	Hi-Z\nNo Battery Present			Hi-Z	Hi-Z\nPreconditioning				L		L\nConstant-Current Fast Charge	L		L\nConstant Voltage				L		L\nCharge Complete – Standby	H		Hi-Z
 Wire Wire Line
 	4550 3400 4550 3550
 Wire Wire Line
@@ -330,139 +407,23 @@ Wire Wire Line
 Wire Wire Line
 	8050 3300 8050 3550
 Connection ~ 8050 3550
-$Comp
-L CONN_01X02 batt1
-U 1 1 58064A0F
-P 7950 2250
-F 0 "batt1" H 7950 2400 50  0000 C CNN
-F 1 "CONN_01X02" V 8050 2250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7950 2250 60  0001 C CNN
-F 3 "" H 7950 2250 60  0000 C CNN
-	1    7950 2250
-	1    0    0    -1  
-$EndComp
-Text GLabel 7550 2200 0    60   Input ~ 0
-batt
-$Comp
-L GND #PWR013
-U 1 1 58064ADD
-P 7600 2300
-F 0 "#PWR013" H 7600 2050 50  0001 C CNN
-F 1 "GND" H 7600 2150 50  0000 C CNN
-F 2 "" H 7600 2300 60  0000 C CNN
-F 3 "" H 7600 2300 60  0000 C CNN
-	1    7600 2300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7600 2300 7750 2300
 Wire Wire Line
 	7550 2200 7750 2200
-$Comp
-L ZENER 3.v1
-U 1 1 58077B4D
-P 6250 5550
-F 0 "3.v1" H 6250 5650 50  0000 C CNN
-F 1 "ZENER" H 6250 5450 50  0000 C CNN
-F 2 "SMD_Packages:SMD-1206_Pol" H 6250 5550 60  0001 C CNN
-F 3 "" H 6250 5550 60  0000 C CNN
-F 4 "2463510" H 6250 5550 60  0001 C CNN "farnell #"
-	1    6250 5550
-	0    1    1    0   
-$EndComp
-$Comp
-L R r1
-U 1 1 58077BE7
-P 6000 5250
-F 0 "r1" V 6080 5250 50  0000 C CNN
-F 1 "1k" V 6000 5250 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 5930 5250 30  0001 C CNN
-F 3 "" H 6000 5250 30  0000 C CNN
-	1    6000 5250
-	0    1    1    0   
-$EndComp
-Text GLabel 6450 5250 2    60   Input ~ 0
-charge_safe
-Text GLabel 6200 2250 0    60   Input ~ 0
-charge_safe
-$Comp
-L GND #PWR014
-U 1 1 58077D29
-P 6250 5850
-F 0 "#PWR014" H 6250 5600 50  0001 C CNN
-F 1 "GND" H 6250 5700 50  0000 C CNN
-F 2 "" H 6250 5850 60  0000 C CNN
-F 3 "" H 6250 5850 60  0000 C CNN
-	1    6250 5850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6150 5250 6450 5250
-Wire Wire Line
-	6250 5750 6250 5850
-Wire Wire Line
-	6250 5350 6250 5250
-Connection ~ 6250 5250
+	5250 5250 6450 5250
 Wire Wire Line
 	9050 2900 9050 3250
-$Comp
-L D_Schottky D2
-U 1 1 580DCE39
-P 9400 3400
-F 0 "D2" H 9400 3500 50  0000 C CNN
-F 1 "D_Schottky" H 9400 3300 50  0000 C CNN
-F 2 "Diodes_SMD:SMA_Standard" H 9400 3400 50  0001 C CNN
-F 3 "" H 9400 3400 50  0000 C CNN
-	1    9400 3400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L +5V #PWR015
-U 1 1 580DD019
-P 9400 2900
-F 0 "#PWR015" H 9400 2750 50  0001 C CNN
-F 1 "+5V" H 9400 3040 50  0000 C CNN
-F 2 "" H 9400 2900 60  0000 C CNN
-F 3 "" H 9400 2900 60  0000 C CNN
-	1    9400 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9050 2900 9400 2900
 Wire Wire Line
 	9400 2900 9400 3250
-$Comp
-L GND #PWR016
-U 1 1 580DD2ED
-P 8650 3100
-F 0 "#PWR016" H 8650 2850 50  0001 C CNN
-F 1 "GND" H 8650 2950 50  0000 C CNN
-F 2 "" H 8650 3100 60  0000 C CNN
-F 3 "" H 8650 3100 60  0000 C CNN
-	1    8650 3100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8650 3100 8750 3100
 Connection ~ 9050 3100
 Connection ~ 9400 2900
 Connection ~ 9400 3550
 Wire Wire Line
-	5250 5250 5850 5250
-Wire Wire Line
 	5250 3900 5250 5250
-Text Notes 7350 6800 0    60   ~ 0
-http://ww1.microchip.com/downloads/en/AppNotes/01149c.pdf\nhttp://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/
-$Comp
-L Q_PMOS_GSD Q1
-U 1 1 580DD92E
-P 9050 3450
-F 0 "Q1" H 9350 3500 50  0000 R CNN
-F 1 "Q_PMOS_GSD" H 9700 3400 50  0000 R CNN
-F 2 "Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering" H 9250 3550 50  0001 C CNN
-F 3 "" H 9050 3450 50  0000 C CNN
-F 4 "2061419" H 9050 3450 60  0001 C CNN "farnell #"
-	1    9050 3450
-	0    -1   1    0   
-$EndComp
 $EndSCHEMATC
