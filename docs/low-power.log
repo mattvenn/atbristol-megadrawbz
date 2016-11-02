@@ -1,0 +1,2264 @@
+Sun Apr 10 22:07:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4727
+=====
+Sun Apr 10 22:07:53 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4727
+=====
+Sun Apr 10 22:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4727
+=====
+Sun Apr 10 22:10:45 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4727
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Sun Apr 10 22:11:54 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3462
+=====
+Sun Apr 10 22:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Sun Apr 10 22:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Sun Apr 10 22:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Sun Apr 10 22:50:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Sun Apr 10 23:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Sun Apr 10 23:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4599
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Sun Apr 10 23:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Sun Apr 10 23:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Sun Apr 10 23:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Sun Apr 10 23:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 00:00:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4604
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 00:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 00:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 4 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4609
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 00:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 00:40:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 00:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 01:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 01:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 01:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 9 not 10
+=====
+Mon Apr 11 01:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4613
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 01:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4618
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 01:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4618
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 02:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4618
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 02:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 02:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 02:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 02:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 02:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 03:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 03:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 03:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4618
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 03:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 03:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 03:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 2 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 04:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 04:10:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 04:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 04:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4637
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 04:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 3 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 04:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 05:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 05:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 05:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 05:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 05:40:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 05:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4632
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 06:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 06:10:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 06:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 06:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 7 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 06:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4623
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 06:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 07:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 07:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 07:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 07:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 07:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 07:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 08:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 08:10:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 08:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 08:30:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 9 not 10
+=====
+Mon Apr 11 08:40:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 08:50:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 09:00:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+=====
+Mon Apr 11 09:10:02 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 09:20:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:wrong packet size got 0 not 10
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
+Mon Apr 11 09:30:01 CEST 2016
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+on
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 1
+INFO:root:err_count = 0
+INFO:root:flags = 1
+INFO:root:batt = 4628
+off
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+INFO:root:start = aa
+INFO:root:rx count = 2
+INFO:root:err_count = 0
+INFO:root:flags = 0
+INFO:root:batt = 3458
+INFO:root:xbee started
+INFO:root:port opened
+INFO:root:sending 0 0 [9c]
+DEBUG:root:['0b10101010', '0b0', '0b0', '0b10011100']
+WARNING:root:bad cksum
+=====
