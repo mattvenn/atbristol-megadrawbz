@@ -36,9 +36,11 @@
 
 * after servo change will need to adjust pen test
 
-### conductive grease
+### improve charger connection
 
-* top up conductive grease on charging hangers
+* clean conductive grease
+* try out magnets, hold in place with clips
+* put conductive grease on charging hangers
 
 # String untangle
 
