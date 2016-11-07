@@ -1,6 +1,6 @@
 # Gondola fix
 
-\[gondola fix kit](gondola_fix.jpg)
+\[gondola fix kit](gondola-fix.jpg)
 
 ## tools required
 
