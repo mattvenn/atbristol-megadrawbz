@@ -63,11 +63,16 @@ bool servo_enable = false;
 
 void setup()
 {
-  /* power saving first */
+  //turn on xbee
   pinMode(XBEE_SLEEP, OUTPUT);
-  digitalWrite(XBEE_SLEEP, HIGH);
+  digitalWrite(XBEE_SLEEP, LOW);
 
+  servo.attach(SERVO);
   pinMode(SERVO_ENABLE, OUTPUT);
+  digitalWrite(SERVO_ENABLE, HIGH);
+  delay(10);
+  servo.write(SERVO_MAX); // move to pen up
+  delay(200);
   digitalWrite(SERVO_ENABLE, LOW);
 
   pinMode(BATT_DIVIDER, OUTPUT);
@@ -78,8 +83,8 @@ void setup()
   pinMode(LED_PEN,OUTPUT);
   pinMode(LED_STATUS,OUTPUT);
 
-  digitalWrite(LED_PEN,LOW);
-  digitalWrite(LED_STATUS,LOW);
+  digitalWrite(LED_PEN,HIGH);
+  digitalWrite(LED_STATUS,HIGH);
 
   pinMode(CHARGE, INPUT);
   digitalWrite(CHARGE, HIGH);
@@ -87,14 +92,11 @@ void setup()
   pinMode(BUTTON, INPUT);
   digitalWrite(BUTTON, HIGH);
 
-  servo.attach(SERVO);
 
   tone(BEEP, 5000, 200);
   delay(200);
 
   tone(BEEP, 3000, 200);
-  //turn on xbee
-  digitalWrite(XBEE_SLEEP, LOW);
 }
 
 uint16_t read_batt_mv()
