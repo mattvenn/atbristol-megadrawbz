@@ -20,7 +20,6 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-@reboot mkdir /tmp/gcodes
-* * * * * cd ~/bipod ; ./logger.py
-* * * * *  cd ~/atbristol-megadrawbz/sunny-webbox/ ; python sunnybox.py
-#* * * * * ~/bipod/fetch.py --robot-id 12
+* * * * * echo 'nameserver 8.8.8.8' > /etc/resolv.conf
+@reboot ./setup.sh >> setup.log 2>&1
+@reboot ntpdate -bs ntp.cis.strath.ac.uk
