@@ -22,7 +22,7 @@ sleep_time = 60
 
 try:
     while True:
-        url = 'http://phant.cursivedata.co.uk/output/w2zweAE648Uk1QAVyNJBHZjpLrL.json?limit=1' 
+        url = 'http://phant.cursivedata.co.uk/output/z8GLNwzBeQiZwl4aVa4zF8xzYVM.json?limit=1' 
         try:
             r = requests.get(url)
             watts = float(r.json()[0]['now_w'])
