@@ -31,15 +31,12 @@ try:
             log.info("updating digits with %s" % kwatts_str)
             driver.update(kwatts_str)
 
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             log.warning("got requests exception: %s" % e)
             
         time.sleep(sleep_time)
 except KeyboardInterrupt:
     log.info("interrupted!")
-except Exception as e:
-    log.error("exited with exception: %s" % e)
-    log.error("exited with exception: %s" % type(e))
 
 driver.cleanup()
 log.info("ending")
